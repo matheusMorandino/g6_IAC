@@ -1,3 +1,1 @@
-  Grupo de trabalho(g6) para a matéria de introdução a administração(IAC), onde o tema é o desenvolvimento de um protótipo de sistema de avaliação de funcionários.
-
-  Ferramentas e tecnológias: O trabalho vai ser desenvolvido usando o VScode como editor de texto, além disso as linguagens permitidas serão HTML, CSS e JS. O trabalho consiste em apenas o front-end então não é necessário torna-lo dinamico .
+  Esse trabalho é um protótipo(apenas o front-end) de um sistema de avaliação de funcionários desenvolvido pelo grupo 6 (G6) na matéria de Introdução à Administração(IAC) do curso de Sistemas de Informação, EACH USP.
