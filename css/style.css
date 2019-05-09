@@ -308,3 +308,23 @@ a.logo_login {
   padding: 2px 8px;
   background-color: rgba(87, 43, 247, 0.171);
 }
+
+.loginButton
+{
+  background-color: #1E9CD7;
+  border: none;
+  color: white;
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+  font-size: 16px;
+  margin: 4px 2px;
+  display: flex; 
+  justify-content: center;
+  
+}
