@@ -1,0 +1,196 @@
+body {
+  background: #0d1b1e;
+}
+
+.background{
+   background:url(../images/main_bg.jpg) no-repeat;
+   position: fixed;
+   opacity: 0.1;
+}
+
+#sidenav {
+  width: 16%;
+  max-width: 16%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  font-family: 'open sans';
+  height: 100%;
+  background: transparent;
+  box-shadow: inset -15px 0 20px -15px #000205;
+}
+
+#sidenav .logo{
+  height: 40px;
+  margin: 30px auto 30px auto;
+  display: block;
+}
+
+#sidenav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidenav ul li{
+  padding: 15px 0px 15px 0px;
+}
+
+/* The navigation menu links */
+#sidenav a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #8C9A9D;
+}
+
+/* When you mouse over the navigation links, change their color */
+#sidenav a:hover, #sidenav a.active:hover {
+  background: #FFF3;
+  color: #FFF;
+}
+
+#sidenav a.active{
+  background: #0003;
+  color: #FFF;
+}
+
+#topnav{
+	position: absolute;
+	left: 16%;
+	height: 50px;
+	width: 84%;
+	background: #fff;
+	box-shadow: 0 4px 8px -8px #8c9a9d;
+	z-index: 1;
+}
+
+#topnav ul {
+	list-style: none;
+	margin: 14px 0;
+}
+
+#topnav a{
+	display: inline-block;
+	margin: 0 10px;
+	float: right;
+}
+
+nav#mobile{
+ 	display: none;
+ }
+
+ nav a:hover .icon path {
+	fill: #f63;
+}
+
+nav object.icon {
+	width: 22px;
+	height: auto;
+}
+
+nav a:hover svg.icon{
+	fill: #f63;
+}
+
+button {
+	background: #679a8b;
+	color: #fff;
+	padding: 6px 12px;
+	border: none;
+	border-radius: 20px;
+}
+
+button.small {
+	padding-bottom: 2px 6px;
+	font-size: .7em;
+}
+
+button:hover{
+	background: #417465;
+	cursor: pointer;
+}
+
+.decision_buttons{
+	display: inline-block;
+	width: 60%;
+	max-width: 60%;
+}
+
+.decision_buttons button {
+	float: right;
+	margin-right: 10px;
+}
+
+@media only screen and (max-width: 900px){
+	nav#mobile{
+ 		display: block;
+ 	}
+ 	#sidenav{
+ 		display: none;
+ 	}
+ 	#topnav {
+ 		display: none;
+ 	}
+}
+
+.content{
+	position: absolute;
+	top: 50px;
+	left: 16%;
+	width: 84%;
+	min-height: 100%;
+	min-height: calc(100% - 50px);
+	background: #FFF;
+}
+
+.elements {
+	margin-left: 4%;
+	margin-bottom: 6%;
+}
+
+.item {
+  font-family: 'open sans';
+  margin: 15px 10px;
+  padding: 2px 8px;
+}
+
+.item p {
+    font-size: .8em;
+    font-weight: 800;
+    color: #679a8bbb;
+}
+
+.item input{
+	border: none;
+	border-bottom: 2px solid #679a8b88;
+	color: #121f24;
+}
+
+.item textarea {
+	display: block;
+    border: 2px solid #679a8b80;
+    border-radius: 10px;
+    min-width: 60%;
+    max-width: 60%;
+    max-height: 300px;
+    min-height: 50px;
+}
+
+.item .radios{
+	margin-bottom: 20px;
+    color: #679a8b88;
+    font-size: 0.75em;
+    font-weight: 800;
+}
+
+.radio-inline {
+   cursor: pointer;
+   margin: 0 5px;
+}
+
+.radio-inline input {
+	margin-right: 5px;
+}
