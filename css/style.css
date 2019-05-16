@@ -1,29 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
 
-
 body {
   font-family: 'open sans', helvetica, arial, sans;
   background: #fefefe;
 }
 
-body.index {
+.index.background{
    background:url(../images/index_s1_background.svg) no-repeat; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+}
+
+.login.background{
+  background:url(../images/main_bg.jpg) no-repeat;
+  position: fixed;
+  opacity: 0.2; 
+}
+
+.background{
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 object {
   pointer-events: none;
 }
 
+h1, h2{
+    font-family: 'open sans';
+    font-weight: 600;
+    padding: 5px;
+    color: #679a8b;
+}
+
 h1{
-  font-family: 'open sans';
-  font-size: 2em;
-  font-weight: 600;
-  padding: 5px;
-  color: #1E9CD7;
+  font-size: 1.5em;
+}
+
+h2{
+  font-size: 1em;
 }
 
 p {
@@ -31,7 +53,7 @@ p {
   color: #5B5B5B;
 }
 
-nav{
+nav#top{
   position: absolute;
   z-index: 1;
   top: 0;
@@ -39,7 +61,7 @@ nav{
   line-height: 0;
 }
 
-nav ul{
+nav#top ul{
   float: right;
   display: inline-block;
   margin: 0;
@@ -47,17 +69,17 @@ nav ul{
   padding: 42px 50px 18px 50px;
 }
 
-nav ul li{
+nav#top ul li{
   height: 10px;
 }
 
-nav ul a {
+nav#top ul a {
   text-decoration: none;
   text-transform: uppercase;
   color: #1e9cd7;
 }
 
-nav ul a:hover{
+nav#top ul a:hover{
   color: #f63;
 }
 
@@ -98,6 +120,7 @@ a.logo_login {
 #index_s1 article h1{
   padding-top: 100px;
   font-size: 2.5em;
+  color: #1E9CD7;
 }
 
 .index_char {
@@ -107,22 +130,7 @@ a.logo_login {
   padding: 120px 0 0 100px;
 }
 
-.background{
-  background:url(../images/index_s1_background.svg) ; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.2;
-}
-
-.log-form {
+.login_form {
   width: 20%;
   min-width: 320px;
   max-width: 475px;
@@ -141,7 +149,7 @@ a.logo_login {
  }
 
 @media(max-width: 40em){
-  .log-form {
+  .login_form {
     width: 60%;
     position: relative;
     margin: 2.5% auto 16px auto;
@@ -178,27 +186,24 @@ a.logo_login {
 
   .index_char{
     width: 70%;
-    padding: 50px 15% 0 15%;
+    padding: 50px 15% 50px 15%;
   }
-}
-
-
-@media(max-width: 20em){
   .log-form {
-  background: transparent;
-  box-shadow: none; 
- }
+    background: transparent;
+    box-shadow: none;
+    width: 95%;
+   }
 
 }
 
-.log-form form {
+.login_form form {
   display: block;
   width: 100%;
   padding: 2em;
   box-sizing:border-box;
 }
 
-.log-form input {
+.login_form input {
   display: block;
   margin: auto auto;
   width: 100%;
@@ -210,11 +215,11 @@ a.logo_login {
   color: #757575;
 }
 
-.log-form input:focus {
+.login_form input:focus {
   outline: none;
 }
 
-.log-form .btn {
+.login_form .btn {
   display: block;
   background: #1E9CD7;
   border: none;
@@ -224,17 +229,17 @@ a.logo_login {
   margin: 0 auto;
 }
 
-.log-form .btn:hover {
+.login_form .btn:hover {
   background: #005B97;
 }
-.log-form .btn:active {
+.login_form .btn:active {
   background: #005B97; 
 }
-.log-form .btn:focus {
+.login_form .btn:focus {
   outline: none;
 }
 
-.log-form .forgot {
+.login_form .forgot {
   color: lighten(#1fb5bf, 10%);
   line-height: .5em;
   position: relative;
@@ -248,31 +253,8 @@ a.logo_login {
   color: #413242;
 }
 
-.log-form .forgot:hover , .log-form .forgot:active{ 
+.login_form .forgot:hover , .log-form .forgot:active{ 
   color: #1E9CD7;
-}
-
-.sidenav {
-  width: 160px;
-  position: absolute;
-  padding-left: 25px;
-  overflow-x: hidden; 
-  padding-top: 20px;
-  font-family: 'open sans';
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: rgb(22, 117, 161);;
 }
 
 /* Style page content */
@@ -287,30 +269,7 @@ a.logo_login {
   .sidenav a {font-size: 18px;}
 }
 
-.cadastro {
-  width: 84%;
-  min-width: 25%;
-  background: #fff;
-  position: absolute;
-  left: 16%;
-  font-family: 'open sans';
-}
-
-.item
-{
-  font-family: 'open sans';
-  left: 5px;
-  right: 5px;
-  margin-top: 10px;
-  max-width: 80%;
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
-  padding: 2px 8px;
-  background-color: rgba(87, 43, 247, 0.171);
-}
-
-.loginButton
-{
+.loginButton {
   background-color: #1E9CD7;
   border: none;
   color: white;
@@ -325,6 +284,5 @@ a.logo_login {
   font-size: 16px;
   margin: 4px 2px;
   display: flex; 
-  justify-content: center;
-  
+  justify-content: center; 
 }
