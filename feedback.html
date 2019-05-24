@@ -13,212 +13,228 @@
     </head>
 
     <body>
-        <div class="background"></div>
+        <div class="background"></div>          
         <nav id="sidenav">
             <object data="images/logo.svg" type="image/svg+xml" class="logo">
-              <img src="images/logo.png" />
             </object>
-                <ul>
-                    <a href="dashboard.html"><li>Dashboard</li></a>
-                    <a href="#" class="active"><li>Dar feedback</li></a>
-                    <a href="relatorios.html"><li>Relatorios</li></a>
-                </ul>
+            <ul>
+                <a href="dashboard.html"><li>Dashboard</li></a>
+                <a href="#" class="active"><li>Dar feedback</li></a>
+                <a href="relatorios.html"><li>Relatorios</li></a>
+            </ul>
+
+            <ul id="sidenav_options">
+                <a title="sair" href="index.html">
+                    <li>
+                        <object id="logout" data="images/logout_icon.svg" type="image/svg+xml" class="icon"></object>
+                    </li>
+                </a>
+                <a title="configuracoes" href="configuracoes.html">
+                    <li>
+                        <object id="settings" data="images/settings_icon.svg" type="image/svg+xml" class="icon"></object>
+                    </li>
+                </a>
+            </ul>
         </nav>
-        <nav id="topnav">
+        <nav id="main-nav">
+            <object data="images/logo.svg" type="image/svg+xml" id="logo_mobile">
+            </object>
             <ul>
                 <a title="sair" href="index.html">
                     <li>
                         <object data="images/logout_icon.svg" type="image/svg+xml" class="icon"></object>
                     </li>
                 </a>
-                <a title="configuracões" href="configuracoes.html">
+                <a title="configuracoes" href="configuracoes.html">
                     <li>
                         <object data="images/settings_icon.svg" type="image/svg+xml" class="icon"></object>
                     </li>
                 </a>
             </ul>
+
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" onclick="sidenav_toggle()">
+                <label for="openSidebarMenu" class="sidebarIconToggle">
+                    <div class="spinner diagonal part-1"></div>
+                    <div class="spinner horizontal"></div>
+                    <div class="spinner diagonal part-2"></div>
+                </label>
         </nav>
+
         <div class="content">
             <div class="elements">
-                <h1>Feedback</h1>
-                <!--Futura implementação pode receber o nome dado e passa-lo como varíavel para o texto acima,
-                assim gerando o formato 'Avaliação do(a) funcionario(a) %nome%'-->
-                
-                <div class="item">
-                    <p>Nome</p>
-                    <input type="text" name="name"/>
-                </div>
+                <section id="feedback_accordion">
+                    <h1>Feedback</h1>
+                    <div id="name">
+                        <p>Nome</p>
+                        <input type="text" name="name"/>
+                    </div>
 
-                <div class="item">
-                    <p>Desempenho</p>
-                    <div class="radios">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Insuficiente
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Ruim
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Moderado
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Bom
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Excelente
-                        </label>
-                    </div>
-                    <textarea name="job_description" placeholder="Observações"></textarea>
-                </div>
-                <div class="item">
-                    <p>Pontualidade de entrega</p>
-                    <div class="radios">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Insuficiente
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Ruim
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Moderado
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Bom
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Excelente
-                        </label>
-                    </div>
-                    <textarea name="job_description" placeholder="Observações"></textarea>
-                </div>
-                <div class="item">
-                    <p>Qualidade e eficiência</p>
-                    <div class="radios">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Insuficiente
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Ruim
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Moderado
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Bom
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Excelente
-                        </label>
-                    </div>
-                    <textarea name="job_description" placeholder="Observações"></textarea>
-                </div>
-                <div class="item">
-                    <p>Alinhamento à cultura da empresa</p>
-                    <div class="radios">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Insuficiente
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Ruim
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Moderado
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Bom
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Excelente
-                        </label>
-                    </div>
-                    <textarea name="job_description" placeholder="Observações"></textarea>
-                </div>
-                <div class="item">
-                    <p>Compromentimento</p>
-                    <div class="radios">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Insuficiente
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Ruim
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Moderado
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Bom
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Excelente
-                        </label>
-                    </div>
-                    <textarea name="job_description" placeholder="Observações"></textarea>
-                </div>
-                <div class="item">
-                    <p>Proatividade</p>
-                    <div class="radios">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Insuficiente
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Ruim
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Moderado
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Bom
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Excelente
-                        </label>
-                    </div>
-                    <textarea name="job_description" placeholder="Observações"></textarea>
-                </div>
-                <div class="item">
-                    <p>Educação e postura</p>
-                    <div class="radios">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Insuficiente
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Ruim
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Moderado
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Bom
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Excelente
-                        </label>
-                    </div>
-                    <textarea name="job_description" placeholder="Observações"></textarea>
-                </div>
-                <div class="item">
-                    <p>Eficácia/adequação aos processos</p>
-                    <div class="radios">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Insuficiente
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Ruim
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Moderado
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Bom
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Excelente
-                        </label>
-                    </div>
-                    <textarea name="job_description" placeholder="Observações"></textarea>
-                </div>
+                    <a href="#fa1">
+                        <h2>Geral</h2>
+                        <!--
+                        <div class="toggle_sign">
+                            <div class="sign_component"></div>
+                        </div> -->
+                    </a>
+                    <!-- Desempenho/Produtividade/Faltas no trabalho-->
+                    <article id="fa1">
+                        <div class="radios">
+                            <input type="radio" name="adequacao_fa1" id="in_fa1">
+                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
+
+                            <input type="radio" name="adequacao_fa1" id="md_fa1">
+                            <label for="md_fa1" class="radio-inline">Moderado</label>
+
+                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
+                            <label for="bm_fa1" class="radio-inline">Bom</label>
+
+                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
+                            <label for="ex_fa1" class="radio-inline">Excelente</label>
+                        </div>
+                        <div class="item">
+                            <p>Desempenho</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_desempenho"><div></div>
+                                <input type="radio" name="adequacao_desempenho"><div></div>
+                                <input type="radio" name="adequacao_desempenho"><div></div>
+                                <input type="radio" name="adequacao_desempenho"><div></div>
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Produtividade</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_produtividade">
+                                <input type="radio" name="adequacao_produtividade">
+                                <input type="radio" name="adequacao_produtividade">
+                                <input type="radio" name="adequacao_produtividade">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Faltas no trabalho</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_faltas">
+                                <input type="radio" name="adequacao_faltas">
+                                <input type="radio" name="adequacao_faltas">
+                                <input type="radio" name="adequacao_faltas">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                    </article>
+
+                    <a href="#fa2"><h2>Postura</h2></a>
+                    <!-- Alinhamento com a cultura da empresa/Comprometimento/Proatividade/Educação-->
+                    <article id="fa2">
+                        <div class="radios">
+                            <input type="radio" name="adequacao_fa2" id="in_fa2">
+                            <label for="in_fa2" class="radio-inline">Insuficiente</label>
+
+                            <input type="radio" name="adequacao_fa2" id="md_fa2">
+                            <label for="md_fa2" class="radio-inline">Moderado</label>
+
+                            <input type="radio" name="adequacao_fa2" id="bm_fa2">
+                            <label for="bm_fa2" class="radio-inline">Bom</label>
+
+                            <input type="radio" name="adequacao_fa2" id="ex_fa2">
+                            <label for="ex_fa2" class="radio-inline">Excelente</label>
+                        </div>
+                        <div class="item">
+                            <p>Alinhamento à cultura da empresa</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_cultura">
+                                <input type="radio" name="adequacao_cultura">
+                                <input type="radio" name="adequacao_cultura">
+                                <input type="radio" name="adequacao_cultura">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Compromentimento</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_comprometimento">
+                                <input type="radio" name="adequacao_comprometimento">
+                                <input type="radio" name="adequacao_comprometimento">
+                                <input type="radio" name="adequacao_comprometimento">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Proatividade</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_proatividade">
+                                <input type="radio" name="adequacao_proatividade">
+                                <input type="radio" name="adequacao_proatividade">
+                                <input type="radio" name="adequacao_proatividade">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Relacionamentos interpessoais/educação</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_relacionamentos">
+                                <input type="radio" name="adequacao_relacionamentos">
+                                <input type="radio" name="adequacao_relacionamentos">
+                                <input type="radio" name="adequacao_relacionamentos">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                    </article>
+
+                    <a href="#fa3"><h2>Entrega</h2></a>
+                    <!-- Pontualidade/Qualidade/Eficácia -->
+                    <article id="fa3">
+                        <div class="radios">
+                            <input type="radio" name="adequacao_fa3" id="in_fa3">
+                            <label for="in_fa3" class="radio-inline">Insuficiente</label>
+
+                            <input type="radio" name="adequacao_fa3" id="md_fa3">
+                            <label for="md_fa3" class="radio-inline">Moderado</label>
+
+                            <input type="radio" name="adequacao_fa3" id="bm_fa3">
+                            <label for="bm_fa3" class="radio-inline">Bom</label>
+
+                            <input type="radio" name="adequacao_fa3" id="ex_fa3">
+                            <label for="ex_fa3" class="radio-inline">Excelente</label>
+                        </div>
+                        <div class="item">
+                            <p>Pontualidade de entrega</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_pontualidade">
+                                <input type="radio" name="adequacao_pontualidade">
+                                <input type="radio" name="adequacao_pontualidade">
+                                <input type="radio" name="adequacao_pontualidade">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Qualidade e eficiência</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_qualidade">
+                                <input type="radio" name="adequacao_qualidade">
+                                <input type="radio" name="adequacao_qualidade">
+                                <input type="radio" name="adequacao_qualidade">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Eficácia/adequação aos processos</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_processos">
+                                <input type="radio" name="adequacao_processos">
+                                <input type="radio" name="adequacao_processos">
+                                <input type="radio" name="adequacao_processos">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                    </article>
+</section>
 
                 <div class="decision_buttons">
+                    <label>
+                        <input type="checkbox" checked>
+                        <span>Gerar relatório de impressão</span>
+                      </label>
                     <button name="cadastrar" onclick="confirmaCadastro()">Submeter</button>
                 </div>
             </div>

@@ -13,36 +13,145 @@
 
     <body>
         <div class="background"></div>
+
+        <div class="background"></div>          
         <nav id="sidenav">
             <object data="images/logo.svg" type="image/svg+xml" class="logo">
-              <img src="images/logo.png" />
             </object>
-                <ul>
-                    <a href="dashboard.html"><li>Dashboard</li></a>
-                    <a href="feedback.html"><li>Dar feedback</li></a>
-                    <a href="#" class="active"><li>Relatorios</li></a>
-                </ul>
+            <ul>
+                <a href="dashboard.html"><li>Dashboard</li></a>
+                <a href="feedback.html"><li>Dar feedback</li></a>
+                <a href="#" class="active"><li>Relatorios</li></a>
+            </ul>
+
+            <ul id="sidenav_options">
+                <a title="sair" href="index.html">
+                    <li>
+                        <object id="logout" data="images/logout_icon.svg" type="image/svg+xml" class="icon"></object>
+                    </li>
+                </a>
+                <a title="configuracoes" href="configuracoes.html">
+                    <li>
+                        <object id="settings" data="images/settings_icon.svg" type="image/svg+xml" class="icon"></object>
+                    </li>
+                </a>
+            </ul>
         </nav>
-        <nav id="topnav">
+        <nav id="main-nav">
+            <object data="images/logo.svg" type="image/svg+xml" id="logo_mobile">
+            </object>
             <ul>
                 <a title="sair" href="index.html">
                     <li>
                         <object data="images/logout_icon.svg" type="image/svg+xml" class="icon"></object>
                     </li>
                 </a>
-                <a title="configuracões" href="configuracoes.html">
+                <a title="configuracoes" href="configuracoes.html">
                     <li>
                         <object data="images/settings_icon.svg" type="image/svg+xml" class="icon"></object>
                     </li>
                 </a>
             </ul>
+
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" onclick="sidenav_toggle()">
+                <label for="openSidebarMenu" class="sidebarIconToggle">
+                    <div class="spinner diagonal part-1"></div>
+                    <div class="spinner horizontal"></div>
+                    <div class="spinner diagonal part-2"></div>
+                </label>
         </nav>
+
         <div class="content">
             <div class="elements">
                 <h1>Relatórios</h1>
-                <!-- 
-                    CRIAR AS COISAS REFERENTES AO RELATORIO AQUI
-                -->
+                    <label>
+                        <input type="checkbox" checked>
+                        <span>Selecionar tudo</span>
+                    </label>                             
+                    <label>
+                        <input type="checkbox" checked>
+                        <span>Mostrar tudo</span>
+                    </label>                             
+
+                    <table id="reports_table">
+                        <tbody>
+                            <tr onclick="open_report();">
+                                <td>
+                                    <div class="employee_pic">   
+                                    </div>
+                                    <div class="employee_name">
+                                    Funcionário 0
+                                    </div> 
+                                    <label>
+                                        <input type="checkbox" checked>
+                                    </label>                             
+                                </td>
+                            </tr>
+                            <tr onclick="open_report();">
+                                <td>
+                                    <div class="employee_pic">   
+                                    </div>
+                                    <div class="employee_name">
+                                    Funcionário 1
+                                    </div>                              
+                                    <label>
+                                        <input type="checkbox" checked>
+                                    </label>                             
+                                </td>
+                            </tr>
+                            <tr onclick="open_report();">
+                                <td>
+                                    <div class="employee_pic">   
+                                    </div>
+                                    <div class="employee_name">
+                                    Funcionário 2
+                                    </div>                              
+                                    <label>
+                                        <input type="checkbox" checked>
+                                    </label>                             
+                                </td>
+                            </tr>
+                            <tr onclick="open_report();">
+                                <td>
+                                    <div class="employee_pic">   
+                                    </div>
+                                    <div class="employee_name">
+                                    Funcionário 3
+                                    </div>                              
+                                    <label>
+                                        <input type="checkbox" checked>
+                                    </label>                             
+                                </td>
+                            </tr>
+                            <tr onclick="open_report();">
+                                <td>
+                                    <div class="employee_pic">   
+                                    </div>
+                                    <div class="employee_name">
+                                    Funcionário 4
+                                    </div>                              
+                                    <label>
+                                        <input type="checkbox" checked>
+                                    </label>                             
+                                </td>
+                            </tr>
+                            <tr onclick="open_report();">
+                                <td>
+                                    <div class="employee_pic">   
+                                    </div>
+                                    <div class="employee_name">
+                                    Funcionário 5
+                                    </div>                              
+                                    <label>
+                                        <input type="checkbox" checked>
+                                    </label>                             
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#add_employee"><button type="button" class="std add_employee">Visualisar</button></a>
+                    <a href="#add_employee"><button type="button" class="std add_employee">Imprimir</button></a>                        
+
             </div>
         </div>
     </body>

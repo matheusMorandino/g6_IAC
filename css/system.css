@@ -8,23 +8,78 @@ body {
    opacity: 0.1;
 }
 
+/* NAVs */
+
+/*Main nav*/
+
+#logo_mobile{
+	display: block;
+	height: 26px;
+	margin: 7px 14px;
+}
+
+#main-nav{
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 40px;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 4px 8px -8px #8c9a9d;
+	z-index: 1;
+}
+
+#main-nav ul, #sidenav_options {
+	list-style: none;
+	margin: 14px 0;
+	display: none;
+}
+
+#main-nav a{
+	display: inline-block;
+	margin: 0 10px;
+	float: right;
+}
+
+/*Side nav*/
 #sidenav {
-  width: 16%;
-  max-width: 16%;
+  width: 100%;
+  max-width: 100%;
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   overflow-x: hidden;
   font-family: 'open sans';
   height: 100%;
-  background: transparent;
-  box-shadow: inset -15px 0 20px -15px #000205;
+  background: #0d1b1ee6;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+  z-index: 100;
 }
 
 #sidenav .logo{
-  height: 40px;
-  margin: 30px auto 30px auto;
-  display: block;
+  display: none;
+}
+
+#sidenav_options {
+	display: block;
+    position: absolute;
+    bottom: 3%;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+#sidenav_options li object {
+	background-color: #d3e5e9;
+	-webkit-mask-image: url(images/logout_icon.svg);
+	mask-image: url(images/logout_icon.svg);
+}
+
+#sidenav #sidenav_options a {
+    display: inline-block;
+    margin: 15px;
 }
 
 #sidenav ul {
@@ -57,30 +112,20 @@ body {
   color: #FFF;
 }
 
-#topnav{
-	position: absolute;
-	left: 16%;
-	height: 50px;
-	width: 84%;
+#sidenav li object {
 	background: #fff;
-	box-shadow: 0 4px 8px -8px #8c9a9d;
-	z-index: 1;
 }
 
-#topnav ul {
-	list-style: none;
-	margin: 14px 0;
+#sidenav #settings {
+    -webkit-mask: url(images/settings_icon.svg);
+    mask-image: url(images/settings_icon.svg);
 }
 
-#topnav a{
-	display: inline-block;
-	margin: 0 10px;
-	float: right;
+#sidenav #logout {
+	-webkit-mask: url(images/logout_icon.svg);
+    mask-image: url(images/logout_icon.svg);
 }
 
-nav#mobile{
- 	display: none;
- }
 
  nav a:hover .icon path {
 	fill: #f63;
@@ -94,6 +139,85 @@ nav object.icon {
 nav a:hover svg.icon{
 	fill: #f63;
 }
+ /*END OF NAVS*/
+
+
+/* SIDEBAR TOGGLE MENU */
+.translate0{
+	transform: translateX(0)!important;
+}
+
+body.sidenavopen {
+    overflow: hidden;
+}
+
+#openSidebarMenu {
+    display: none;
+}
+
+#openSidebarMenu, .sidebarIconToggle, .spinner, .horizontal, .diagonal.part-1, .diagonal.part-2, 
+#openSidebarMenu:checked ~ .sidebarIconToggle > .horizontal, 
+#openSidebarMenu:checked ~ .sidebarIconToggle > .diagonal.part-1,
+#openSidebarMenu:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.sidebarIconToggle, .spinner {
+    position: absolute;
+    width: 100%;
+}
+
+.sidebarIconToggle {
+    z-index: 99;
+    height: 100%;
+    top: 11px;
+    right: 15px;
+    height: 22px;
+    width: 22px;
+    display: inline-block;
+}
+.spinner {
+    height: 4px;
+    background-color:#1524254d;
+    cursor: pointer;
+}
+
+.toggle_sign{
+	height: 22px;
+	width: 22px;
+	border: 2px solid #1524254d;
+	border-radius: 50%;
+	transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.horizontal, .diagonal.part-1, .diagonal.part-2 {
+    position: relative;
+    float: right;
+    border-radius: 10px;
+}
+
+.horizontal, .diagonal.part-2 {
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transform: rotate(-135deg);
+    margin-top: -11px;
+}
+/* END OF SIDEBAR TOGGLE MENU*/
+
+
+
+/*BUTTONS*/
 
 button {
 	background: #679a8b;
@@ -124,26 +248,16 @@ button:hover{
 	margin-right: 10px;
 }
 
-@media only screen and (max-width: 900px){
-	nav#mobile{
- 		display: block;
- 	}
- 	#sidenav{
- 		display: none;
- 	}
- 	#topnav {
- 		display: none;
- 	}
-}
+/*END OF BUTTONS*/
 
 .content{
 	position: absolute;
-	top: 50px;
-	left: 16%;
-	width: 84%;
+	top: 40px;
+	left: 0;
+	width: 100%;
 	min-height: 100%;
-	min-height: calc(100% - 50px);
-	background: #FFF;
+	min-height: calc(100% - 40px);
+	background: #F6F6F6;
 }
 
 .elements {
@@ -193,4 +307,150 @@ button:hover{
 
 .radio-inline input {
 	margin-right: 5px;
+}
+
+table {
+	width: 96%;
+	max-width: 96%;
+	margin-top: 1.2em;
+	background: #fff;
+	border-radius: 10px;
+	color: #5B5B5B;
+}
+
+table tr:nth-child(even){
+	background: #fbfbfb;
+}
+
+table td {
+	cursor: pointer;
+	width: 100%;
+	height: 40px;
+	padding: .075 rem;
+	vertical-align: middle;
+}
+
+table employee_pic {
+	background-size: 40px;
+	background-color: #ccc;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+/*
+#feedback_accordion a {
+	text-decoration: none;
+}
+
+#feedback_accordion article{
+	display: none;
+}
+
+#feedback_accordion article:target {
+	display: block;
+}
+
+.toggle_sign .sign_component{
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(images/plus.svg);
+} 
+.sign_component.horizontal{
+	background: url(images/minus.svg);
+}
+
+a:active .toggle_sign .vertical {
+	display: none;
+}
+*/
+
+#feedback_accordion .item .radios div{
+	display: inline;
+}
+/* FAILED ATTEMPT TO MAKE RADIO INPUTS LOOK GOOD
+To continue (or not)
+https://codepen.io/Luxplanjay/pen/mWNXVy
+
+
+#feedback_accordion .item .radios input {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#feedback_accordion .item .radios input:checked{
+  margin-right: 2rem;
+  border: 0.5rem solid #009688;
+  background: #fff;
+  color: #000AAA;
+}
+
+#feedback_accordion .item .radios input:checked + div::before{
+	margin-right: 2rem;
+	border: 0.5rem solid #009688;
+	background: #F00;
+}
+
+#feedback_accordion .item .radios div::before {
+	display: inline-block;
+	content: "";
+	height: .9rem;
+	width: .9rem;
+	margin-right: 0.625rem;
+	border: 0.2rem solid #000;
+	border-radius: 50%;
+	transition: all 0.25s linear;
+}
+*/
+@media only screen and (min-width: 900px) { 
+	#main-nav {
+		position: absolute;
+		top: 0;
+		left: 16%;
+		height: 50px;
+		width: 84%;
+		box-shadow: 0 4px 8px -8px #8c9a9d;
+ 	}
+
+ 	#main-nav ul{
+ 		display: block;
+ 	}
+
+ 	#sidenav_options{
+ 		display: none;
+ 	}
+
+ 	#logo_mobile, .sidebarIconToggle {
+ 		display: none;
+ 	}
+
+	#sidenav {
+		transform: unset;
+		top: 0;
+		width: 16%;
+		max-width: 16%;
+		box-shadow: inset -15px 0 20px -15px #000205;
+		background: transparent;
+	}
+
+ 	#sidenav .logo{
+		height: 40px;
+		margin: 30px auto 30px auto;
+		display: block;
+	}
+
+	.content{
+		top: 50px;
+		left: 16%;
+		width: 84%;
+		min-height: 100%;
+		min-height: calc(100% - 50px);
+	}
+
+	button.add_employee{
+	    float: right;
+	    margin-right: 4%;
+	    margin-bottom: 1.2em;
+	}
 }

@@ -11,3 +11,18 @@ function validateForm() {
             return false;
         }
   }
+
+function sidenav_toggle(){
+    var sidenav = document.getElementById("sidenav");
+    if(sidenav.classList.contains("translate0")){
+        sidenav.classList.remove("translate0");
+        $("body").removeClass("sidenavopen");
+    } else {
+        sidenav.classList.add("translate0");
+        $("body").addClass("sidenavopen");
+    }
+}
+
+function avaliar(){
+    window.location = "feedback.html";
+}
