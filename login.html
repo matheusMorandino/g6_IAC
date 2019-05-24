@@ -9,43 +9,6 @@
         <script src="scripts/main.js" type="text/javascript"></script>
 	</head>
 
-	<script type="text/javascript">
-		var loginData = [
-				{
-					usuario: "emilio",
-					senha: "emilio123"
-				},
-				{
-					usuario: "amanda",
-					senha: "amanda123"
-				},
-				{
-					usuario: "thais",
-					senha: "thais123"
-				},
-				{
-					usuario: "matheus",
-					senha: "matheus123"
-				}
-			];
-
-			function validaUsuario() {
-					var usuario = document.getElementById("usuario").value;
-					var senha = document.getElementById("senha").value;
-
-					var i = 0;
-					while (i < loginData.length) {
-						if (loginData[i].usuario == usuario && loginData[i].senha == senha) {
-							window.location = "dashboard.html";
-							return false;
-						}
-						i++;
-					}
-					alert("Senha e/ou usuário errado(s).")
-					return false;
-				}
-	</script>
-
 	<body>
 		<div class="login background"></div>
 		<a href="index.html" class="logo_login">
@@ -55,9 +18,9 @@
 		</a>
 		<div class="login_form">
 			<form name="loginform"> 
-			<input type="text" title="username" id="usuario" placeholder="Usuário (deixe em branco)"/>
-			<input type="password" title="username" id="senha" placeholder="Senha (deixe em branco)"/>
-			<div class="loginButton" onclick="validaUsuario();">Login</div>
+			<input type="text" title="username" id="usuario" placeholder="Usuário (seu primeiro nome)"/>
+			<input type="password" title="username" id="senha" placeholder="Senha (sobrenome)"/>
+			<div class="loginButton" onclick="validateUser();">Login</div>
 			<a class="forgot" href="#">Esqueceu o usuário?</a>
 			</form>
 		</div>

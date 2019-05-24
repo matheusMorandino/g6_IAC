@@ -21,7 +21,7 @@
     max-height: 100%;
     z-index: 20;
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
-    overflow-y: auto;
+    overflow-y: auto;   
 
     border-radius: 5px;
     padding: 15px;
@@ -43,8 +43,6 @@
 .modal_body{
     max-height: 80%; 
     max-height: calc(80%-100px);
-    overflow-y: scroll;
-
 }
 
 .modal .overlay {

@@ -1,16 +1,41 @@
-function validateForm() {
-        var un = document.loginform.usr.value;
-        var pw = document.loginform.pword.value;
-        var username = "admin"; 
-        var password = "";
-        if ((un == username) && (pw == password)) {
+var loginData = [
+        {
+            usuario: "Emilio",
+            senha: "Haro"
+        },
+        {
+            usuario: "Amanda",
+            senha: "Venturin"
+        },
+        {
+            usuario: "Thais",
+            senha: "Lasso"
+        },
+        {
+            usuario: "Matheus",
+            senha: "Morandino"
+        },
+        {
+            usuario: "Naiara",
+            senha: "Alflen"
+        }
+    ];
+
+function validateUser() {
+    var usuario = document.getElementById("usuario").value;
+    var senha = document.getElementById("senha").value;
+
+    var i = 0;
+    while (i < loginData.length) {
+        if (loginData[i].usuario == usuario && loginData[i].senha == senha) {
+            window.location = "dashboard.html";
             return true;
         }
-        else {
-            alert ("Usuário ou senha incorretos");
-            return false;
-        }
-  }
+        i++;
+    }
+    alert("Usuário ou senha incorretos");
+    return false;
+    }
 
 function sidenav_toggle(){
     var sidenav = document.getElementById("sidenav");

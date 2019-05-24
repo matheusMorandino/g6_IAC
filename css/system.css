@@ -239,8 +239,9 @@ button:hover{
 
 .decision_buttons{
 	display: inline-block;
-	width: 60%;
-	max-width: 60%;
+	width: 100%;
+	max-width: 100%;
+	margin: 15px 0;
 }
 
 .decision_buttons button {
@@ -261,7 +262,7 @@ button:hover{
 }
 
 .elements {
-	margin-left: 4%;
+	margin: 4%;
 	margin-bottom: 6%;
 }
 
@@ -277,7 +278,7 @@ button:hover{
     color: #679a8bbb;
 }
 
-.item input{
+input, .item input{
 	border: none;
 	border-bottom: 2px solid #679a8b88;
 	color: #121f24;
@@ -365,9 +366,36 @@ a:active .toggle_sign .vertical {
 	display: none;
 }
 */
+#feedback_accordion{
+	background: #fff;
+	border-radius: 10px;
+	padding: 5px 25px;	
+}
+
+#feedback_accordion a{
+	text-decoration: none;
+	background: #bcd3cc4d;
+	display: block;
+	padding-left: 15px;
+	height: 35px;
+	margin-bottom: 1%;
+}
+
+#feedback_accordion a h2{
+	height: 30px;
+}
+
+#feedback_accordion article radios {
+	margin-left: 18px;
+}
 
 #feedback_accordion .item .radios div{
 	display: inline;
+}
+
+#feedback_accordion #name{
+	margin: 0;
+	margin-bottom: 3%;
 }
 /* FAILED ATTEMPT TO MAKE RADIO INPUTS LOOK GOOD
 To continue (or not)
