@@ -69,15 +69,9 @@
                         <input type="text" name="name"/>
                     </div>
 
-                    <a href="#fa1">
-                        <h2>Geral</h2>
-                        <!--
-                        <div class="toggle_sign">
-                            <div class="sign_component"></div>
-                        </div> -->
-                    </a>
+                    <button class="collapsible">Geral</button>
+                    <div class="content_collapsible">
                     <!-- Desempenho/Produtividade/Faltas no trabalho-->
-                    <article id="fa1">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa1" id="in_fa1">
                             <label for="in_fa1" class="radio-inline">Insuficiente</label>
@@ -121,11 +115,12 @@
                             </div>
                             <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
-                    </article>
+                    </div>
+                    <br><br>
 
-                    <a href="#fa2"><h2>Postura</h2></a>
                     <!-- Alinhamento com a cultura da empresa/Comprometimento/Proatividade/Educação-->
-                    <article id="fa2">
+                    <button class="collapsible">Postura</button>
+                    <div class="content_collapsible">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa2" id="in_fa2">
                             <label for="in_fa2" class="radio-inline">Insuficiente</label>
@@ -179,11 +174,12 @@
                             </div>
                             <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
-                    </article>
+                    </div>
+                    <br><br>
 
-                    <a href="#fa3"><h2>Entrega</h2></a>
                     <!-- Pontualidade/Qualidade/Eficácia -->
-                    <article id="fa3">
+                    <button class="collapsible">Entrega</button>
+                    <div class="content_collapsible">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa3" id="in_fa3">
                             <label for="in_fa3" class="radio-inline">Insuficiente</label>
@@ -227,8 +223,9 @@
                             </div>
                             <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
-                    </article>
-</section>
+                    </div>
+                    <br><br>
+                </section>
 
                 <div class="decision_buttons">
                     <label>
@@ -239,6 +236,23 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
 
     </body>
 
