@@ -10,8 +10,109 @@
         <script src="scripts/jquery.min.js" type="text/javascript"></script>
         <script src="scripts/main.js" type="text/javascript"></script>
     </head>
+        <style>
+          
+            #closerelat{
+            position: relative;
+            left: -4px;
+            top:4px;
+            }
+            .Relatorio{
+                z-index: 4; 
+                position: relative; 
+                left:50%; 
+                width:60%;
+                margin-left: -30%; 
+                min-height: 1000px;
+                background-color: beige;
+                visibility: visible;
 
+
+            }
+        .Blur{
+                position:absolute;
+                z-index: 3;
+                min-width: 100%; 
+                min-height: 100%;
+                filter: blur(20px);
+            
+            }
+            th{
+                width: 33%;
+            }
+            tr{
+                width: 33%;
+            }
+
+            #prodTable{
+                width: 33%;
+                background-color: aqua;
+            }
+            .btn-danger{
+                padding: 20px;
+            }
+            .FuncInfo{
+                padding: 30px;
+                
+            }
+            #TableFunc{
+                width: 100%;
+                background-color: aqua;
+            }
+            #TableFunc tr{
+                width: 100px;
+            }
+            #Campo{
+               
+                float: left;
+                width: 15%;
+            }
+            #Obs{
+              
+                float: left;
+                width:30%;
+            }
+            #Resultado{
+                float:left;
+                width: 10%;
+            }
+            .Data{
+                width: 50%;
+                font-size: 30px; 
+                float: left;
+            }
+            .Nome{
+                width: 50%;
+                float: left;
+            }                                   
+            .TituloRelatorio{
+                font-size: 15px;
+            } 
+
+        </style>    
     <body>
+            <div class = "Blur" id = "Blur">
+
+                
+            </div> 
+    
+
+            <script>
+                    function cont(){
+                    var conteudo = document.getElementById('print').innerHTML,
+                    tela_impressao = window.open('about:blank');
+                    tela_impressao.document.write(Relatorio);
+                    tela_impressao.window.print();
+                    tela_impressao.window.close();
+                    
+                    }
+                   
+                    
+            </script>
+    
+    
+            
+         
         <div class="background"></div>
 
         <div class="background"></div>          
@@ -145,10 +246,242 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="#add_employee"><button type="button" class="std add_employee">Visualisar</button></a>
+                    <a href="#add_employee"><button type="button" class="std add_employee" onclick="cont()">Visualisar</button></a>
                     <a href="#add_employee"><button type="button" class="std add_employee">Imprimir</button></a>                        
 
             </div>
         </div>
+
+
+        <div class = "Relatorio" id = "print">
+                <div class="modal_header">
+                        <a href="#" id="closerelat">
+                            <svg viewbox="0 0 40 40" id="close_button">
+                                <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+                              </svg>
+                        </a>                        
+                    </div>
+                        <div class = "FuncInfo">
+                        <div class = "Nome" >
+                            Funcionario 1 -
+                        </div>    
+                        <div class = "Data">
+                            30/05/2019
+                        </div>    
+
+                        <div class="container">
+                            <br>
+                            <span id = "TituloRelatorio">Geral</span>
+                            <br>
+                            <br>
+                            <div class = "Geral">
+                                
+                                <div class = "Desempenho" id= "Campo">
+                                Desempenho
+                                </div>  
+                                <div class = "ResultadoDesempenho" id = "Resultado">  
+                                -  Otimo
+                                </div>
+                                <div class = "ObsDesempenho" id ="Obs">
+                                 -  Acima da média
+                                </div>    
+
+                            </div>
+                            
+                        </div>
+                        <br>
+                        
+                        <br>
+                        <span id = "TituloRelatorio">Postura</span>
+                        <br>
+                        <br>
+                        <div class = "Geral">
+                            
+                            <div class = "Desempenho" id= "Campo">
+                            Desempenho
+                            </div>  
+                            <div class = "ResultadoDesempenho" id = "Resultado">  
+                            -  Regular
+                            </div>
+                            <div class = "ObsDesempenho" id ="Obs">
+                             -  Acima da média
+                            </div>    
+
+                        </div>
+                        <br>
+                        <br>
+                        <span id = "TituloRelatorio">Entrega</span>
+                        <br>
+                        <br>
+                        <div class = "Geral">
+                            
+                            <div class = "Desempenho" id= "Campo">
+                            Desempenho
+                            </div>  
+                            <div class = "ResultadoDesempenho" id = "Resultado">  
+                            -  Regular
+                            </div>
+                            <div class = "ObsDesempenho" id ="Obs">
+                             -  Acima da média
+                            </div>    
+
+                        </div>
+                        
+                    </div>
+
+
+
+                    <div class = "FuncInfo">
+                            <div class = "Nome" >
+                                Funcionario 2 -
+                            </div>    
+                            <div class = "Data">
+                                30/05/2019
+                            </div>    
+    
+                            <div class="container">
+                                <br>
+                                <span id = "TituloRelatorio">Geral</span>
+                                <br>
+                                <br>
+                                <div class = "Geral">
+                                    
+                                    <div class = "Desempenho" id= "Campo">
+                                    Desempenho
+                                    </div>  
+                                    <div class = "ResultadoDesempenho" id = "Resultado">  
+                                    -  Otimo
+                                    </div>
+                                    <div class = "ObsDesempenho" id ="Obs">
+                                     -  Acima da média
+                                    </div>    
+    
+                                </div>
+                                
+                            </div>
+                            <br>
+                            
+                            <br>
+                            <span id = "TituloRelatorio">Postura</span>
+                            <br>
+                            <br>
+                            <div class = "Geral">
+                                
+                                <div class = "Desempenho" id= "Campo">
+                                Desempenho
+                                </div>  
+                                <div class = "ResultadoDesempenho" id = "Resultado">  
+                                -  Regular
+                                </div>
+                                <div class = "ObsDesempenho" id ="Obs">
+                                 -  Acima da média
+                                </div>    
+    
+                            </div>
+                            <br>
+                            <br>
+                            <span id = "TituloRelatorio">Entrega</span>
+                            <br>
+                            <br>
+                            <div class = "Geral">
+                                
+                                <div class = "Desempenho" id= "Campo">
+                                Desempenho
+                                </div>  
+                                <div class = "ResultadoDesempenho" id = "Resultado">  
+                                -  Regular
+                                </div>
+                                <div class = "ObsDesempenho" id ="Obs">
+                                 -  Acima da média
+                                </div>    
+    
+                            </div>
+                            
+                        </div>
+
+                        <div class = "FuncInfo">
+                                <div class = "Nome" >
+                                    Funcionario 3 -
+                                </div>    
+                                <div class = "Data">
+                                    30/05/2019
+                                </div>    
+        
+                                <div class="container">
+                                    <br>
+                                    <span id = "TituloRelatorio">Geral</span>
+                                    <br>
+                                    <br>
+                                    <div class = "Geral">
+                                        
+                                        <div class = "Desempenho" id= "Campo">
+                                        Desempenho
+                                        </div>  
+                                        <div class = "ResultadoDesempenho" id = "Resultado">  
+                                        -  Otimo
+                                        </div>
+                                        <div class = "ObsDesempenho" id ="Obs">
+                                         -  Acima da média
+                                        </div>    
+        
+                                    </div>
+                                    
+                                </div>
+                                <br>
+                                
+                                <br>
+                                <span id = "TituloRelatorio">Postura</span>
+                                <br>
+                                <br>
+                                <div class = "Geral">
+                                    
+                                    <div class = "Desempenho" id= "Campo">
+                                    Desempenho
+                                    </div>  
+                                    <div class = "ResultadoDesempenho" id = "Resultado">  
+                                    -  Regular
+                                    </div>
+                                    <div class = "ObsDesempenho" id ="Obs">
+                                     -  Acima da média
+                                    </div>    
+        
+                                </div>
+                                <br>
+                                <br>
+                                <span id = "TituloRelatorio">Entrega</span>
+                                <br>
+                                <br>
+                                <div class = "Geral">
+                                    
+                                    <div class = "Desempenho" id= "Campo">
+                                    Desempenho
+                                    </div>  
+                                    <div class = "ResultadoDesempenho" id = "Resultado">  
+                                    -  Regular
+                                    </div>
+                                    <div class = "ObsDesempenho" id ="Obs">
+                                     -  Acima da média
+                                    </div>    
+        
+                                </div>
+                                
+                            </div>
+
+
+                        <div class = "btnsRelatorio">
+                            <br>
+                            <br>
+                                <a href="#add_employee"><button type="button" class="std add_employee" onclick="cont()">Sair</button></a>
+                                <a href="#add_employee"><button type="button" class="std add_employee">Imprimir</button></a>                        
+                        </div>    
+
+                </div>
+
+
+                        
+        </div>
+         
+
+
     </body>
 </html>

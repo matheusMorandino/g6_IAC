@@ -1,0 +1,680 @@
+<html>
+
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css?family=Poppins|Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+</link>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</link>
+<script src="scripts/modernizr.min.js" type="text/javascript">
+</script>
+<script src="scripts/jquery.min.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="scripts/main.js" type="text/javascript">
+    </script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<script type="text/javascript" src="JS/eventos.js"></script>
+</head>
+<body>
+
+<div class  = "banana">
+
+</div>
+
+        <div class = "CadastrarUsuario" id= "CadastrarUsuario">
+
+
+                <div class = "CatTipoAvaliacao">
+                Cadastro de funcionario         
+                </div>
+
+
+                  <div class = "formularioCadastro" id = "formularioCadastro">  
+                <form>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput"><span id ="TextForm">Nome:</span></label>
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                                <label for="formGroupExampleInput"><span id ="TextForm">Idade:</span></label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Idade">
+                        </div>
+     
+                        
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1"><span id = "TextForm">Descrição da função</span></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                        <div class="form-group">
+                                <label for="formGroupExampleInput"><span id ="TextForm">Salario:</span></label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Salario">
+                        </div>
+                        <div class="form-group">
+                                <label for="formGroupExampleInput"><span id ="TextForm">Idade:</span></label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Idade">
+                        </div>
+                        <div class = "FotoPerfil">
+                        <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Selecione sua foto de perfil</label>
+                        </div>
+                        </div>
+                 </form>
+                  </div>
+                        
+                            
+                           
+                
+
+                <div class = "BotoesCadastro">
+                        <button type="button" class="btn btn-success" onclick = "CadastrarUsuario();">Enviar</button>
+                        <button type="button" class="btn btn-danger" onclick="cancelarCadastroUsuario();">Cancelar</button>
+
+
+                        </div>
+
+        </div>
+       
+    <script>
+       // var AV1 = Document.getElementById("AvaliacaoDesempenho");
+       function Adicionarfuncionario(){
+        CadastroFuncionario.style.visibility = "visible"
+       }
+      
+       var CadastroFuncionario = document.getElementById("CadastrarUsuario"); 
+       
+       function AdicionarCadastroUsuario(){
+ 
+        document.getElementById("formularioCadastro").style.visibility = "visible";
+        }
+
+
+
+       function cancelarCadastroUsuario(){
+
+        document.getElementById("CadastrarUsuario").style.visibility = "hidden";
+       }
+       
+       function CadastrarUsuario(){
+
+        document.getElementById("CadastrarUsuario").style.visibility = "hidden"; 
+
+       }
+       
+       function cancelar(){
+            
+            document.getElementById("AvaliacaoDesempenho").style.visibility = "hidden";
+        }
+        function armazenar(){
+            
+            document.getElementById("AvaliacaoDesempenho").style.visibility = "hidden";
+        }
+    </script>   
+    <div class="background"></div>
+    <object data="images/logo_IAC.svg" type="image/svg+xml" class="logo">
+        <img src="images/logo_IAC.png" id = "LogoTopo">
+        
+    </object>
+
+
+    <div class  = "MenuHamburguerIcon" id = "MenuHamburguerIcon">
+    <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAADPz89LS0uWlpaCgoL39/eQkJCxsbH29vbX19d0dHQ4ODimpqZiYmLv7++7u7sbGxvFxcU6Ojrh4eEQEBBbW1t6enozMzOgoKDGxsYfHx8VFRXi4uJcXFxvb2/37P7uAAACdUlEQVR4nO3di24aMRCFYRfIEsItIZAQaJv3f8tqFdI0qjT2ri2Nzuz/PcEcrTHYO9gpAQAAAAAAAAAAAAAAAMAEHJa7uY7d8jAs3v71h57XfXnApXexIy0L83Ub70pH23RFAX9611nhVBLx7F1llXM+4J13jZXucgGP3hVWO2YS7rwLrLazA66862tgZSa89y6vgXsz4dq7vAbWZkLdL/svz2ZC7+qamHjCJ+/qGriaCV+8y2vgxUyoum76l72GmnmX18CDmTDCVGMHTFvv+qptMwnlZ9OnXMD04F1ipcynUH+cZsdo7827ygpvJQFTOnjXOVrxtnCnuYhaF+0l3uwXaltum8WALe/bgzzOdByHPD4AAAAAAAAAACCmu2wXOraXoS8uHufe75IGmz8OyDe7epc7ynVWGlC3mT3bxv5BubfN7mm7efeussp7PqB6p7fd5Z0iNOvbrfrKs8yn3GzjXV8DdkDdZqEvdtuQ/iDNDVO9H2v/m5sJT97lNXAyE3pX18TEn2H8z2H8uTT+92GEqcYOGGCY5n6X6q8tsltS4deHE1jjp/Tbu8oKRfs0yrNN4V7bBPZLU/w971709xYAAAAAAAAAAEBI8HOi9M76Og8662slel5brgH6L922ocIz98Kfmxj+7Mv455eGP4NWe4z2cuPUu74G7IDxz/OOfya78n8PP9m9beozac+eTb2ra2LiCePfM6O5bPrOvitIvcu7Z3d667fqZ/8IHP7etQB35/3KJBRuY/9Q0Myutsn2XcEdlhO4hzR1z951jlZ2l2zSXUOV3gecJnCnc0/tXu7LsHgAAAAAAAAAAAAAAAAAoOkPIbRTOa9jGAYAAAAASUVORK5CYII=" width = "70px" height="70px">
+    </div>
+    <div class = "MenuHamburguer" id = "MenuHamburguer">
+    
+    </div>    
+       <!--  <div class = "menu">
+            <ul>
+            <li> <a href="main.html">Dashboard</a></li>
+            <li>    <a href="buscaDeFuncionarioAvaliacao.html">Dar feedback</a></li>
+            <li><a href="buscaDeFuncionarioRelatorio.html">Relatorios</a></li>
+            </ul>
+
+
+        </div> -->
+
+        <div id="myMenu" class="Menu">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="images/logo_IAC.png" id="LogoMenuLateral" />
+                <a href="index.html">Dashboard</a>
+                <a href="buscaDeFuncionarioRelatorio.html">Dar feedback</a>
+                <a href="relatorios.html">Relatorios</a>
+              
+        </div>
+
+
+        <script>
+                function openNav() {
+                  document.getElementById("myMenu").style.width = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("myMenu").style.width = "0";
+                }
+                </script>
+
+        <div class = "BotaoMenu">
+        
+         <span style="font-size:30px;cursor:pointer" onclick="openNav()"> <div class = "SetaMenu">
+            
+         </div> </span>
+        
+        </div>
+
+        </div class ="menuHamburguer">
+        
+        </div>
+    <script>
+        const comission = document.querySelector('#comission input');
+const comissionLabel = document.getElementById('comissionLabel');
+const comissionLabelPrefix = comissionLabel.innerHTML;
+const comissionRange = document.createElement('label');
+
+comissionRange.id = 'rangeLimits';
+comissionRange.className = 'row';
+comissionRange.innerHTML = `<span class="col-6 text-left">${comission.getAttribute('min')}</span><span class="col-6 text-right">${comission.getAttribute('max')}</span>`;
+document.querySelector('#comission').appendChild(comissionRange);
+
+comissionLabel.innerHTML = `${comissionLabelPrefix}${comission.value}`;
+
+comission.addEventListener('input', function() {
+    comissionLabel.innerHTML = `${comissionLabelPrefix}${Number(comission.value).toFixed(2)}`;
+}, false);
+
+// Bootstrap Tooltips Actuivation
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+    </script>
+
+ 
+
+
+
+    <div class="cadastro">
+        <div class = "TituloFeedBack">Selecione o funcionario  <div class="BotaoAdicionarFuncionario">
+                <button type="button" class="btn btn-primary" onclick="Adicionarfuncionario()">Adicionar Funcionario</button>
+        </div><br><br></div>
+        <!--Futura implementação pode receber o nome dado e passa-lo como varíavel para o texto acima,
+        assim gerando o formato 'Avaliação do(a) funcionario(a) %nome%'-->
+        <table class="table" id = "FeedBack">
+            <script>
+            function AvaliacaoFuncionario(){
+                window.location.href = "avaliaFuncionario.html";
+            }
+
+           function AbrirModal1(){
+            document.getElementById("c").style.visibility = "visible";
+           }
+            
+            </script>
+            <tbody>
+                <tr id = "SelecionarFuncionario" onclick="AvaliacaoFuncionario();" id="F1">
+                <td id = "CampoAvaliacao">
+                  
+                    <div class = "FotoFuncionario" >
+                    
+                    </div>
+                    <div class="NomeSelecionaFuncionario">
+                    Tio Patinhas
+                    </div> 
+                    
+                </td>
+                <td id = "Ignorar" id="F1">
+               
+                </td>
+                </tr>
+                
+                <tr id = "SelecionarFuncionario" >
+                        <td id = "CampoAvaliacao">
+                          
+                           
+                            <div class="BotaoAdicionarFuncionarioLista" onclick="Adicionarfuncionario();">
+                            Adicionar Funcionarios
+                            </div> 
+                            
+                        </td>
+                        <td id = "BtnDescartar" onclick="ApagarFuncionario()">
+                        
+                        </td>
+                        </tr>
+
+               
+               
+      
+                
+                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+            </tbody>
+            
+          </table>
+   
+
+<style>
+
+.MenuHamburguerIcon{
+    float:right;
+    margin-right: 40px;
+    margin-top: 5px;
+    cursor: pointer;    
+}
+
+
+    .banana{
+        width: 50px;
+        height: 50px;
+        z-index: 8;
+        position: absolute;
+    }
+    .MenuHamburguer{
+        height: 90px;
+        width: 100%;
+        background-color: red;
+        position: fixed;
+  right: 0;
+  left: 0px;
+  top: 0px;
+  z-index: 4;
+    }
+    .FotoPerfil{
+      
+        width: 30%;
+    }
+    .BotoesCadastro{
+        padding: 30px;
+        float: right;
+    }
+    #TextForm{
+        font-size: 20px;
+        color: darkblue;
+    }
+    .formularioCadastro{
+        padding: 30px;
+    }
+    #TituloCadastro{
+        float:left; 
+        font-size: 25px;
+        padding-left:20px;
+        font-style: bold;
+        width:100%;
+        padding-top:10px; 
+    }
+   
+    #SelecionarFuncionario:hover{
+        background-color:whitesmoke;
+        cursor:pointer;
+
+    }
+    .TituloFeedBack{
+        
+        width: 100%;
+        height: 50px;
+
+    }
+    .BotaoAdicionarFuncionario{
+        float:right;
+        padding-right: 5%;
+    }
+    .BotaoAdicionarFuncionarioLista{
+        color:black; 
+       text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        font-family: 'Fjalla One', sans-serif;
+    }
+    .NomeSelecionaFuncionario{
+        color:black; 
+        margin-left:45px;
+        line-height: 40px;
+        font-size: 20px;
+        font-family: 'Fjalla One', sans-serif;
+    }
+    .FotoFuncionario{
+        background-size: 40px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHC_BWVFj9FZAvz-WfKE4QuzGbG7kipOBzW51NGGGzirOK8Ow4");
+        background-color: black;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position:absolute;
+        letter-spacing: 1.5px;
+    }
+   .botaoEnviar{
+       float: right;
+       padding: 15px;
+   }
+    ::-webkit-scrollbar {
+    width: 12px;
+    background: whitesmoke;
+    opacity: 0.2;
+}
+  
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: darkgray;
+
+
+    opacity: 0.5;
+    
+}
+input[type = range]{
+    border: 1px solid transparent;
+    width:280%;
+}
+/* slider css  */
+.slidera{
+    width: 1000px;
+}
+.containerSlide{
+ 
+}
+
+
+
+/* 
+fim do slider css */
+#LogoMenuLateral{
+    width: 100px;
+    padding-left: 15%;
+}
+.col-6{
+    visibility: hidden;
+}
+
+
+.col-6 text-right{
+    visibility: hidden;
+}
+.col-6 text-left{
+    visibility: hidden;
+}
+/* Esse css aqui em cima é local não global */ 
+
+.InputBoxConsideracoes{
+    padding: 5%;
+    position: relative;
+    top:-86%;
+   
+}
+.slider{
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 5%;
+   
+}
+.DataAvaliacao{
+    float: right;
+}
+.CatTipoAvaliacao{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: darkblue;
+    opacity: 0.8;
+    color:white;
+    text-align: justify ;
+    
+    padding:20px;
+    font-size: 20px; 
+}
+.TextoBarra{
+    font-family: 'Ubuntu', sans-serif;
+    font-style: bold;
+    padding-top: 4%;
+    padding-left: 2%;
+    font-size: 25px;
+    text-align: center;
+    }
+.BotaoMenu{
+    padding:5px;
+    position:absolute;
+    top:50%;
+}    
+.SetaMenu{
+background-image: url("https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-arrow-24.png");
+background-size: 40px;
+width:40px;
+height: 40px;
+background-color: white;
+color:white;   
+border:2px, solid, black;
+border-radius:  50%;
+text-align: center;
+font-size: 30px;
+font-family: impact;
+line-height: 40px;
+vertical-align: middle;
+}
+.Menu {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color:white;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.Menu a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+
+.Menu a:hover {
+color: #f1f1f1;
+}
+
+.Menu .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+
+.BotaoSubmeterFeedBack{
+padding-right: 15px;
+}
+.BotaoSubmeter{
+
+float:right;
+width: 30%;
+line-height: 40px;
+vertical-align: middle;
+text-align: center;
+height: 40px;
+background-color:lightblue;
+border-radius: 20px;
+
+}
+.ButtonAdicionar{
+
+width:40px;
+height: 40px;
+background-color: darkblue;
+
+color:white;   
+border-radius:  50%;
+text-align: center;
+font-size: 30px;
+font-family: impact;
+line-height: 40px;
+vertical-align: middle;
+
+
+}
+.table{
+padding:1%;
+padding-left: 1%;
+padding-right: 1%;
+}
+#FeedBack{
+width:100%;
+
+}
+.TituloFeedBack{
+float:left; 
+font-size: 20px;
+padding-bottom:20px;
+}
+#LinhaFeedBack{
+min-height: 40px;  
+
+}
+#CampoAvaliacao{
+width: 90%;
+
+height: 40px;
+}
+#BtnAvaliar{
+width: 10%;
+
+}
+.menu{
+background-color: white;
+position: relative;
+z-index: 2;
+
+}
+.menu {
+background-color: white;
+position: absolute;
+z-index:2;
+float : left;  
+height: 100%;
+padding-top: 40px;
+}
+.AvaliacaoDesempenho{
+position: absolute;
+background-color:whitesmoke;
+border-radius: 15px;
+overflow-y: scroll;
+z-index: 3; 
+
+top:20%;
+height: 70%;
+width: 60%;
+left:20%; 
+right: 20%;
+
+}
+.CadastrarUsuario{
+    position: absolute;
+background-color:whitesmoke;
+border-radius: 15px;
+overflow-y: scroll;
+z-index: 3; 
+visibility: hidden;
+top:20%;
+height: 70%;
+width: 60%;
+left:20%; 
+right: 20%;
+}
+.BotoesAvalicao{
+    position: relative;
+  top:-90%;
+    width: 40%;
+    padding: 2%;
+    float:right;
+  
+}
+
+
+
+@media (min-width: 640px){
+	.banana{
+		background-color: red;
+    }
+    .MenuHamburguer{
+      visibility: collapse;
+    }
+    .MenuHamburguerIcon{
+      visibility: visible;
+    }
+
+}
+
+@media (min-width: 768px){
+ .Menu{
+   visibility:collapse;  
+ }
+ .SetaMenu{
+    visibility:collapse;
+ }
+ .BotaoMenu{
+     visibility: collapse;
+
+ }
+
+
+	.banana{
+		background-color: green;
+	}
+    .MenuHamburguer{
+      visibility: collapse;
+    }
+    .MenuHamburguerIcon{
+      visibility: visible;
+    }
+}
+
+@media (min-width: 1024px){
+	.banana{
+		background-color: blue;
+    }
+    .MenuHamburguer{
+      visibility: collapse;
+    }
+    .MenuHamburguerIcon{
+        visibility: collapse;
+    }
+}
+
+@media (min-width: 1200px){
+    .MenuHamburguer{
+      visibility: collapse;
+    }
+	.banana{
+		background-color: orange;
+	}
+
+}
+
+
+
+
+</style>    
+
+
+
+    </div>
+</body>
+
+</html>
