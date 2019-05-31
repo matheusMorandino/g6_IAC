@@ -23,18 +23,36 @@
                 left:50%; 
                 width:60%;
                 margin-left: -30%; 
-                min-height: 1000px;
-                background-color: beige;
+            
+                background-color: white;
+                box-shadow: 6px;
                 visibility: visible;
+                margin:4px, 4px; 
+                padding:4px; 
+             
+         
+                height: 600px; 
+                overflow-x: hidden; 
+                overflow-x: auto; 
+                text-align:justify; 
 
 
             }
         .Blur{
                 position:absolute;
-                z-index: 3;
+                z-index: 2;
                 min-width: 100%; 
-                min-height: 100%;
-                filter: blur(20px);
+                min-height: 5000px;;
+                background-size: cover;
+                overflow: hidden;
+                background-color: black;
+                opacity: 0.9;
+                filter: alpha(opacity=50); /* For IE8 and earlier */
+                visibility: collapse;
+
+                
+                                
+            
             
             }
             th{
@@ -88,6 +106,13 @@
             .TituloRelatorio{
                 font-size: 15px;
             } 
+            .Impressao{
+                width: 100%; 
+                z-index: 9;
+                min-height: 1000px;
+                left:50%;
+                border-left: -25%; 
+            }
 
         </style>    
     <body>
@@ -97,18 +122,7 @@
             </div> 
     
 
-            <script>
-                    function cont(){
-                    var conteudo = document.getElementById('print').innerHTML,
-                    tela_impressao = window.open('about:blank');
-                    tela_impressao.document.write(Relatorio);
-                    tela_impressao.window.print();
-                    tela_impressao.window.close();
-                    
-                    }
-                   
-                    
-            </script>
+        
     
     
             
@@ -246,14 +260,14 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="#add_employee"><button type="button" class="std add_employee" onclick="cont()">Visualisar</button></a>
+                    <a href="#add_employee"><button type="button" class="std add_employee" onclick="AbreRelatorio()">Visualisar</button></a>
                     <a href="#add_employee"><button type="button" class="std add_employee">Imprimir</button></a>                        
 
             </div>
         </div>
 
 
-        <div class = "Relatorio" id = "print">
+        <div class = "Relatorio" id = "Relatorio">
                 <div class="modal_header">
                         <a href="#" id="closerelat">
                             <svg viewbox="0 0 40 40" id="close_button">
@@ -471,8 +485,8 @@
                         <div class = "btnsRelatorio">
                             <br>
                             <br>
-                                <a href="#add_employee"><button type="button" class="std add_employee" onclick="cont()">Sair</button></a>
-                                <a href="#add_employee"><button type="button" class="std add_employee">Imprimir</button></a>                        
+                                <a href="#add_employee"><button type="button" class="std add_employee" onclick="FecharRelatorio();">Sair</button></a>
+                                <a href="#add_employee"><button type="button" class="std add_employee" onclick="Imprimir()">Imprimir</button></a>                        
                         </div>    
 
                 </div>
@@ -480,7 +494,42 @@
 
                         
         </div>
-         
+
+                                <div class = "Impressao" id ="Impressao">
+                                </div>
+         <script>
+
+                var Relatorio = document.getElementById("Relatorio");
+                var Blur = document.getElementById("Blur");
+
+          function  FecharRelatorio(){
+              
+              Relatorio.style.visibility = "collapse";
+              Blur.style.visibility = "collapse";
+          }
+
+          function AbreRelatorio(){
+            Relatorio.style.visibility = "visible";
+            Blur.style.visibility = "visible";
+
+          }
+          function Imprimir(){
+                 var Impressao = document.getElementById('Impressao');
+                 var conteudo = document.getElementById('Relatorio').innerHTML,
+                 tela_impressao = window.open('about:blank');
+
+                tela_impressao.document.write(conteudo);
+                tela_impressao.window.print();
+                tela_impressao.window.close();
+
+          };
+
+       
+
+
+
+
+         </script>    
 
 
     </body>
