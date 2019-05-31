@@ -35,7 +35,7 @@ function validateUser() {
     }
     alert("Usuário ou senha incorretos");
     return false;
-    }
+}
 
 function sidenav_toggle(){
     var sidenav = document.getElementById("sidenav");
