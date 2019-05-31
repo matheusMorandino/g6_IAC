@@ -302,9 +302,10 @@ a.logo_login {
 }
 
 .content_collapsible {
-  padding: 0 18px;
+  padding: 18px;
   padding-top: 2%;
-  width: 96.5%;
+  width: 100%;
+  border: spacing 10px; 
   display:inline-block;
   overflow: hidden;
   background-color: #f1f1f1;
@@ -320,4 +321,15 @@ a.logo_login {
 
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/*Elementos de submit do feedback*/
+.gera_relatorio {
+  font-size: 0.9em;
+}
+
+.cadastrar {
+  width: 10%; 
+  height: 1%; 
+  min-width: 100px;
 }

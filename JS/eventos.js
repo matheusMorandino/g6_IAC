@@ -37,5 +37,5 @@ function validaUsuario() {
         }
         i++;
     }
-    alert("Senha e/ou usuário errado(s).")
+    alert("Senha e/ou usuário errado(s).fsefse" + "|" + usuario + "|" + senha);
 }

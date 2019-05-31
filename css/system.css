@@ -97,7 +97,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.93em;
   color: #8C9A9D;
 }
 
@@ -298,12 +298,14 @@ input, .item input{
 	margin-bottom: 20px;
     color: #679a8b88;
     font-size: 0.75em;
-    font-weight: 800;
+	font-weight: 800;
+	font-family: 'open sans';
 }
 
 .radio-inline {
    cursor: pointer;
    margin: 0 5px;
+   font-size: 0.9em;
 }
 
 .radio-inline input {
