@@ -84,8 +84,68 @@
                         <input type="text" name="name"/>
                     </div>
 
-                    <button class="collapsible">Geral</button>
-                    <div class="content_collapsible" id= "Nicho">
+                    <style>
+                        #BotaoGeral{
+                            border-Radius : 20px 20px 0px 0px ;
+                        }
+                        #BotaoPostura{
+                            border-Radius : 20px 20px 0px 0px ;
+                        }
+                        #BotaoEntrega{
+                            border-Radius : 20px 20px 0px 0px ;
+                        }
+                        .content_collapsible{
+                            
+                            width: 100%;
+                            border: 0px;
+                            padding: 0px;
+                            border-Radius : 0px 0px 20px 20px ;
+                           
+                        }
+                    </style>
+                    <script>
+                             var bi = 1;
+                            function BotaoGeral(){
+                                    bi++;     
+                                    if(bi == 1 ){
+                                        document.getElementById("BotaoGeral").style.borderRadius = "20px 20px 20px 20px ";
+                                    }
+                                    if(bi == 2){
+                                    document.getElementById("BotaoGeral").style.borderRadius = "20px 20px 0px 0px ";
+                                        bi = 0 ;
+                                }
+                            }
+                            //BotaoPostura()
+                            var bi2 = 1;
+                            function BotaoPostura(){
+                                    bi2++;     
+                                    if(bi2 == 1 ){
+                                        document.getElementById("BotaoPostura").style.borderRadius = "20px 20px 20px 20px ";
+                                    }
+                                    if(bi2 == 2){
+                                    document.getElementById("BotaoPostura").style.borderRadius = "20px 20px 0px 0px ";
+                                        bi2 = 0 ;
+                                }
+                            }
+                            var bi3 = 1;
+                            function BotaoEntrega(){
+                               
+                                bi3++;     
+                                    if(bi3 == 1 ){
+                                        document.getElementById("BotaoEntrega").style.borderRadius = "20px 20px 20px 20px ";
+                                    }
+                                    if(bi3 == 2){
+                                    document.getElementById("BotaoEntrega").style.borderRadius = "20px 20px 0px 0px ";
+                                        bi3 = 0 ;
+                                }
+                             
+                            }
+
+                    </script>
+
+
+                    <button class="collapsible"  id = "BotaoGeral" onclick="BotaoGeral()">Geral</button>
+                    <div class="content_collapsible">
                     <!-- Desempenho/Produtividade/Faltas no trabalho-->
                         <div class="radios">
                             <input type="radio" name="adequacao_fa1" id="in_fa1">
@@ -130,12 +190,12 @@
                             </div>
                             <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
-                    </div></div>
+                    </div>
                     <br><br>
 
                     <!-- Alinhamento com a cultura da empresa/Comprometimento/Proatividade/Educação-->
-                    <button class="collapsible">Postura</button>
-                    <div class="content_collapsible" id= "Nicho">
+                    <button class="collapsible"  id = "BotaoPostura" onclick="BotaoPostura()">Postura</button>
+                    <div class="content_collapsible">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa2" id="in_fa2">
                             <label for="in_fa2" class="radio-inline">Insuficiente</label>
@@ -189,12 +249,12 @@
                             </div>
                             <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
-                    </div></div>
+                    </div>
                     <br><br>
 
                     <!-- Pontualidade/Qualidade/Eficácia -->
-                    <button class="collapsible">Entrega</button>
-                    <div class="content_collapsible" id= "Nicho">
+                    <button class="collapsible" id = "BotaoEntrega" onclick="BotaoEntrega()">Entrega</button>
+                    <div class="content_collapsible">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa3" id="in_fa3">
                             <label for="in_fa3" class="radio-inline">Insuficiente</label>
@@ -206,7 +266,7 @@
                             <label for="bm_fa3" class="radio-inline">Bom</label>
 
                             <input type="radio" name="adequacao_fa3" id="ex_fa3">
-                            <label for="ex_fa3" class="radio-inline" >Excelente</label>
+                            <label for="ex_fa3" class="radio-inline">Excelente</label>
                         </div>
                         <div class="item">
                             <p>Pontualidade de entrega</p>
@@ -238,21 +298,16 @@
                             </div>
                             <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
-                    </div></div>
+                    </div>
                     <br><br>
                 </section>
 
                                 <script>
-
-                                        var cc = document.getElementById("Nicho");
                                      function MostrarTudo(){
+                                         
 
+                                    };
 
-                                        
-                                     }
-
-
-                               
                                     
                                 </script>
 
