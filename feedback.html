@@ -86,13 +86,13 @@
 
                     <style>
                         #BotaoGeral{
-                            border-Radius : 20px 20px 0px 0px ;
+                            border-Radius : 20px 20px 20px 20px ;
                         }
                         #BotaoPostura{
-                            border-Radius : 20px 20px 0px 0px ;
+                            border-Radius : 20px 20px 20px 20px ;
                         }
                         #BotaoEntrega{
-                            border-Radius : 20px 20px 0px 0px ;
+                            border-Radius : 20px 20px 20px 20px ;
                         }
                         .content_collapsible{
                             
@@ -101,6 +101,13 @@
                             padding: 0px;
                             border-Radius : 0px 0px 20px 20px ;
                            
+                        }
+                        .collapsible{
+                            display: block;
+
+                        }
+                        .content_collapsible{
+                            display: none;
                         }
                     </style>
                     <script>
@@ -145,7 +152,7 @@
 
 
                     <button class="collapsible"  id = "BotaoGeral" onclick="BotaoGeral()">Geral</button>
-                    <div class="content_collapsible">
+                    <div class="content_collapsible"  id = "cc">
                     <!-- Desempenho/Produtividade/Faltas no trabalho-->
                         <div class="radios">
                             <input type="radio" name="adequacao_fa1" id="in_fa1">
@@ -195,7 +202,7 @@
 
                     <!-- Alinhamento com a cultura da empresa/Comprometimento/Proatividade/Educação-->
                     <button class="collapsible"  id = "BotaoPostura" onclick="BotaoPostura()">Postura</button>
-                    <div class="content_collapsible">
+                    <div class="content_collapsible"  id = "cc">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa2" id="in_fa2">
                             <label for="in_fa2" class="radio-inline">Insuficiente</label>
@@ -254,7 +261,7 @@
 
                     <!-- Pontualidade/Qualidade/Eficácia -->
                     <button class="collapsible" id = "BotaoEntrega" onclick="BotaoEntrega()">Entrega</button>
-                    <div class="content_collapsible">
+                    <div class="content_collapsible" id = "cc">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa3" id="in_fa3">
                             <label for="in_fa3" class="radio-inline">Insuficiente</label>
@@ -306,6 +313,12 @@
                                      function MostrarTudo(){
                                          
 
+                                         BotaoEntrega();
+                                         BotaoGeral();
+                                         BotaoPostura();   
+                                
+                                        
+
                                     };
 
                                     
@@ -332,8 +345,9 @@
         <script>
             var coll = document.getElementsByClassName("collapsible");
             var i;
-
+           
             for (i = 0; i < coll.length; i++) {
+                
                 coll[i].addEventListener("click", function () {
                     this.classList.toggle("active");
                     var content = this.nextElementSibling;
@@ -344,6 +358,7 @@
                     }
                 });
             }
+               
         </script>
 
     </body>
