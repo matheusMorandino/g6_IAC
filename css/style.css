@@ -72,6 +72,11 @@ nav#top ul{
 nav#top ul li{
   height: 10px;
 }
+textarea{
+  resize: none;
+  width: 100%;
+ 
+}
 
 nav#top ul a {
   text-decoration: none;
