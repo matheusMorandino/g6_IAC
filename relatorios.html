@@ -113,6 +113,8 @@
                 left:50%;
                 border-left: -25%; 
             }
+            .TituloRelatorio{
+            }
 
         </style>    
     <body>
@@ -261,7 +263,7 @@
                         </tbody>
                     </table>
                     <a href="#add_employee"><button type="button" class="std add_employee" onclick="AbreRelatorio()">Visualisar</button></a>
-                    <a href="#add_employee"><button type="button" class="std add_employee">Imprimir</button></a>                        
+                    <a href="#add_employee"><button type="button" class="std add_employee" onclick="Imprimir()">Imprimir</button></a>                        
 
             </div>
         </div>
@@ -269,7 +271,7 @@
 
         <div class = "Relatorio" id = "Relatorio">
                 <div class="modal_header">
-                        <a href="#" id="closerelat">
+                        <a href="#" id="closerelat" onclick = " FecharRelatorio()">
                             <svg viewbox="0 0 40 40" id="close_button">
                                 <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
                               </svg>

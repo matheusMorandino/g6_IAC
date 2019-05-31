@@ -12,6 +12,21 @@
         <script src="scripts/main.js" type="text/javascript"></script>
     </head>
 
+<style>
+
+#TextAreaRelatorio{
+    z-index: 2;
+    resize: vertical;
+    width:1900px;
+}
+
+
+
+
+
+
+</style>
+
     <body>
         <div class="background"></div>          
         <nav id="sidenav">
@@ -70,7 +85,7 @@
                     </div>
 
                     <button class="collapsible">Geral</button>
-                    <div class="content_collapsible">
+                    <div class="content_collapsible" id= "Nicho">
                     <!-- Desempenho/Produtividade/Faltas no trabalho-->
                         <div class="radios">
                             <input type="radio" name="adequacao_fa1" id="in_fa1">
@@ -93,7 +108,7 @@
                                 <input type="radio" name="adequacao_desempenho"><div></div>
                                 <input type="radio" name="adequacao_desempenho"><div></div>
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                         <div class="item">
                             <p>Produtividade</p>
@@ -103,7 +118,7 @@
                                 <input type="radio" name="adequacao_produtividade">
                                 <input type="radio" name="adequacao_produtividade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                         <div class="item">
                             <p>Faltas no trabalho</p>
@@ -113,14 +128,14 @@
                                 <input type="radio" name="adequacao_faltas">
                                 <input type="radio" name="adequacao_faltas">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                     </div>
                     <br><br>
 
                     <!-- Alinhamento com a cultura da empresa/Comprometimento/Proatividade/Educação-->
                     <button class="collapsible">Postura</button>
-                    <div class="content_collapsible">
+                    <div class="content_collapsible" id= "Nicho">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa2" id="in_fa2">
                             <label for="in_fa2" class="radio-inline">Insuficiente</label>
@@ -142,7 +157,7 @@
                                 <input type="radio" name="adequacao_cultura">
                                 <input type="radio" name="adequacao_cultura">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                         <div class="item">
                             <p>Compromentimento</p>
@@ -152,7 +167,7 @@
                                 <input type="radio" name="adequacao_comprometimento">
                                 <input type="radio" name="adequacao_comprometimento">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                         <div class="item">
                             <p>Proatividade</p>
@@ -162,7 +177,7 @@
                                 <input type="radio" name="adequacao_proatividade">
                                 <input type="radio" name="adequacao_proatividade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                         <div class="item">
                             <p>Relacionamentos interpessoais/educação</p>
@@ -172,14 +187,14 @@
                                 <input type="radio" name="adequacao_relacionamentos">
                                 <input type="radio" name="adequacao_relacionamentos">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                     </div>
                     <br><br>
 
                     <!-- Pontualidade/Qualidade/Eficácia -->
                     <button class="collapsible">Entrega</button>
-                    <div class="content_collapsible">
+                    <div class="content_collapsible" id= "Nicho">
                         <div class="radios">
                             <input type="radio" name="adequacao_fa3" id="in_fa3">
                             <label for="in_fa3" class="radio-inline">Insuficiente</label>
@@ -201,7 +216,7 @@
                                 <input type="radio" name="adequacao_pontualidade">
                                 <input type="radio" name="adequacao_pontualidade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                         <div class="item">
                             <p>Qualidade e eficiência</p>
@@ -211,7 +226,7 @@
                                 <input type="radio" name="adequacao_qualidade">
                                 <input type="radio" name="adequacao_qualidade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                         <div class="item">
                             <p>Eficácia/adequação aos processos</p>
@@ -221,17 +236,39 @@
                                 <input type="radio" name="adequacao_processos">
                                 <input type="radio" name="adequacao_processos">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
                         </div>
                     </div>
                     <br><br>
                 </section>
 
+                                <script>
+
+                                        var cc = document.getElementById("Nicho");
+                                     function MostrarTudo(){
+
+
+                                        
+                                     }
+
+
+                               
+                                    
+                                </script>
+
                 <div class="decision_buttons">
+                        <label>
+                                <input type="checkbox" onclick = "MostrarTudo()">
+                                <span>Mostrar Tudo</span>
+                        
+                        </label>
                     <label>
                         <input type="checkbox" checked>
                         <span>Gerar relatório de impressão</span>
-                      </label>
+                    </label>
+
+                  
+
                     <button name="cadastrar" onclick="confirmaCadastro()">Submeter</button>
                 </div>
             </div>
