@@ -259,7 +259,7 @@ progress {
  */
 
 textarea {
-
+  overflow: auto;
 }
 
 /**

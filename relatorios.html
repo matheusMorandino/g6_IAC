@@ -6,151 +6,9 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"></link>
         <link rel="stylesheet" type="text/css" href="css/system.css"></link>
         <link rel="stylesheet" type="text/css" href="css/modal.css"></link>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="scripts/modernizr.min.js" type="text/javascript"></script>
-        <script src="scripts/jquery.min.js" type="text/javascript"></script>
-        <script src="scripts/main.js" type="text/javascript"></script>
     </head>
-        <style>
-          
-            #closerelat{
-            position: relative;
-            left: -4px;
-            top:4px;
-            }
-            .Relatorio{
-                z-index: 4; 
-                position: relative; 
-                left:50%; 
-                width:60%;
-                margin-left: -30%; 
-            
-                background-color: white;
-                box-shadow: 6px;
-                visibility: visible;
-                margin:4px, 4px; 
-                padding:4px; 
-             
-         
-                height: 600px; 
-                overflow-x: hidden; 
-                overflow-x: auto; 
-                text-align:justify; 
 
-
-            }
-        .Blur{
-                position:absolute;
-                z-index: 2;
-                min-width: 100%; 
-                min-height: 5000px;;
-                background-size: cover;
-                overflow: hidden;
-                background-color: black;
-                opacity: 0.9;
-                filter: alpha(opacity=50); /* For IE8 and earlier */
-                visibility: collapse;
-
-                
-                                
-            
-            
-            }
-            th{
-                width: 33%;
-            }
-            tr{
-                width: 33%;
-            }
-
-            #prodTable{
-                width: 33%;
-                background-color: aqua;
-            }
-            .btn-danger{
-                padding: 20px;
-            }
-            .FuncInfo{
-                padding: 30px;
-                
-            }
-            #TableFunc{
-                width: 100%;
-                background-color: aqua;
-            }
-            #TableFunc tr{
-                width: 100px;
-            }
-            #Campo{
-               
-                float: left;
-                width: 15%;
-            }
-            #Obs{
-              
-                float: left;
-                width:30%;
-            }
-            #Resultado{
-                float:left;
-                width: 10%;
-            }
-            .Data{
-                width: 50%;
-                font-size: 30px; 
-                float: left;
-            }
-            .Nome{
-                width: 50%;
-                float: left;
-            }                                   
-            .TituloRelatorio{
-                font-size: 15px;
-            } 
-            .Impressao{
-                width: 100%; 
-                z-index: 9;
-                min-height: 1000px;
-                left:50%;
-                border-left: -25%; 
-            }
-            .TituloRelatorio{
-               
-            }
-
-            #NomeFuncionario0{
-                visibility: collapse;
-            }
-            #NomeFuncionario1{
-                visibility: collapse;
-            }
-            #NomeFuncionario2{
-                visibility: collapse;
-            }
-            #NomeFuncionario3{
-                visibility: collapse;
-            }
-            #NomeFuncionario4{
-                visibility: collapse;
-            }
-            #NomeFuncionario5{
-                visibility: collapse;
-            }
-
-
-        </style>    
     <body>
-            <div class = "Blur" id = "Blur">
-
-                
-            </div> 
-    
-
-        
-    
-    
-            
-         
         <div class="background"></div>
 
         <div class="background"></div>          
@@ -202,479 +60,64 @@
 
         <div class="content">
             <div class="elements">
-                <h1>Relatórios</h1>
-                    
-                    <div class = "SerachBar">
-
-                            <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                      <button class="btn btn-outline-secondary" type="button" onclick = "Buscar()">Buscar</button>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Buscar funcionario" aria-label="" aria-describedby="basic-addon1" id = "BarraPesquisaRelatorios">
-                            </div>
-                                  
-                                  
-
-                    </div>    
-
-                    <label>
-                        <input type="checkbox"  onclick="MostrarTudo()">
-                        <span>Mostrar tudo</span>
-                    </label>                             
-
+                <section class="wrapper">
+                    <article class="wrapper_header">
+                        <h1>Relatórios</h1>    
+                    </article>                             
                     <table id="reports_table">
-
-                        <script>
-
-                        //id= "NomeFuncionario4"
-                                  
-                                        function MostrarTudo(){
-                                    var f0 = document.getElementById("NomeFuncionario0"); 
-                                    var f1 = document.getElementById("NomeFuncionario1"); 
-                                    var f2 = document.getElementById("NomeFuncionario2");
-                                    var f3 = document.getElementById("NomeFuncionario3");
-                                    var f4 = document.getElementById("NomeFuncionario4");  
-                                    var f5 = document.getElementById("NomeFuncionario5");  
-                                    f0.style.visibility = "visible";
-                                    f1.style.visibility = "visible";
-                                    f2.style.visibility = "visible";
-                                    f3.style.visibility = "visible";
-                                    f4.style.visibility = "visible";
-                                    f5.style.visibility = "visible";
-                                }
-
-                                        function Buscar(text){
-                                    var f0 = document.getElementById("NomeFuncionario0"); 
-                                    var f1 = document.getElementById("NomeFuncionario1"); 
-                                    var f2 = document.getElementById("NomeFuncionario2");
-                                    var f3 = document.getElementById("NomeFuncionario3");
-                                    var f4 = document.getElementById("NomeFuncionario4");  
-                                    var f5 = document.getElementById("NomeFuncionario5");  
-                
-                                   var bpr = document.getElementById("BarraPesquisaRelatorios");
-                                   var a = bpr.value;
-                                  
-                                   if (a.localeCompare("funcionario 0") == 0 )
-                                   {
-                                    f0.style.visibility = "visible";
-                                   }
-                                   if (a.localeCompare("funcionario 1") == 0 )
-                                   {
-                                    f1.style.visibility = "visible";
-                                   }if (a.localeCompare("funcionario 2") == 0 )
-                                   {
-                                    f2.style.visibility = "visible";
-                                   }if (a.localeCompare("funcionario 3") == 0 )
-                                   {
-                                    f3.style.visibility = "visible";
-                                   }if (a.localeCompare("funcionario 4") == 0 )
-                                   {
-                                    f4.style.visibility = "visible";
-                                   }if (a.localeCompare("funcionario 5") == 0 )
-                                   {
-                                    f5.style.visibility = "visible";
-                                   }
-                                       
-
-
-
-                                        
-                                        }
-
-                        </script>    
-
                         <tbody>
-                            <tr onclick="open_report();"id= "NomeFuncionario0">
-                                <td>
-                                    <div class="employee_pic">   
-                                    </div>
-                                    <div class="employee_name">
+                            <tr onclick="open_report();">
+                                <td class ="employee_name">
+                                    <input type="checkbox" checked/>
                                     Funcionário 0
-                                    </div> 
-                                    <label>
-                                        <input type="checkbox" checked>
-                                    </label>                             
+                                </td>
+                                <td>
+                                    01/05/2019
                                 </td>
                             </tr>
-                            <tr onclick="open_report();" id= "NomeFuncionario1">
-                                <td>
-                                    <div class="employee_pic">   
-                                    </div>
-                                    <div class="employee_name">
+                            <tr onclick="open_report();">
+                                <td class ="employee_name">
+                                    <input type="checkbox" checked/>
                                     Funcionário 1
-                                    </div>                              
-                                    <label>
-                                        <input type="checkbox" checked>
-                                    </label>                             
+                                </td>
+                                <td>
+                                    23/05/2019
                                 </td>
                             </tr>
-                            <tr onclick="open_report();" id= "NomeFuncionario2">
-                                <td>
-                                    <div class="employee_pic">   
-                                    </div>
-                                    <div class="employee_name">
+                            <tr onclick="open_report();">
+                                <td class ="employee_name">
+                                    <input type="checkbox" checked/>
                                     Funcionário 2
-                                    </div>                              
-                                    <label>
-                                        <input type="checkbox" checked>
-                                    </label>                             
+                                </td>
+                                <td>
+                                    25/05/2019
                                 </td>
                             </tr>
-                            <tr onclick="open_report();" id= "NomeFuncionario3">
-                                <td>
-                                    <div class="employee_pic">   
-                                    </div>
-                                    <div class="employee_name">
+                            <tr onclick="open_report();">
+                                <td class ="employee_name">
+                                    <input type="checkbox" checked/>
                                     Funcionário 3
-                                    </div>                              
-                                    <label>
-                                        <input type="checkbox" checked>
-                                    </label>                             
                                 </td>
-                            </tr>
-                            <tr onclick="open_report();" id= "NomeFuncionario4">
                                 <td>
-                                    <div class="employee_pic">   
-                                    </div>
-                                    <div class="employee_name" >
-                                    Funcionário 4
-                                    </div>                              
-                                    <label>
-                                        <input type="checkbox" checked>
-                                    </label>                             
+                                    30/04/2019
                                 </td>
                             </tr>
-                            <tr onclick="open_report();" id = "NomeFuncionario5">
-                                <td>
-                                    <div class="employee_pic">   
-                                    </div>
-                                    <div class="employee_name">
-                                    Funcionário 5
-                                    </div>                              
-                                    <label>
-                                        <input type="checkbox" checked>
-                                    </label>                             
-                                </td>
-                            </tr>
+                            
                         </tbody>
-                    </table>
-                    <a href="#add_employee"><button type="button" class="std add_employee" onclick="AbreRelatorio()">Visualisar</button></a>
-                    <a href="#add_employee"><button type="button" class="std add_employee" onclick="Imprimir()">Imprimir</button></a>                        
+                    </table>                        
+                </section>
+                <div class="decision_buttons">
+                    <input type="checkbox" id="show_all_reports" checked>
+                    <label for="show_all_reports">Selecionar tudo</label>
 
+                    <a href="#add_employee"><button type="button" class="std add_employee">Visualisar</button></a>
+                    <a href="#add_employee"><button type="button" class="std add_employee">Imprimir</button></a>
+                </div>
             </div>
         </div>
 
-
-        <div class = "Relatorio" id = "Relatorio">
-                <div class="modal_header">
-                        <a href="#" id="closerelat" onclick = " FecharRelatorio()">
-                            <svg viewbox="0 0 40 40" id="close_button">
-                                <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
-                              </svg>
-                        </a>                        
-                    </div>
-
-                        <style>
-                        .radios{
-                         margin-left: 20px;
-
-                        }
-                        #Relatorio{
-                            visibility: collapse;
-                        }    
-                        .Nome{
-                            padding-top: 50px;
-                            font-size: 20px;
-                            font-weight: bold;
-                            width:200px;
-                            width: 50%;
-                        }
-                        .Data{
-                            padding-top: 50px;
-                            font-size: 20px;
-                            font-weight: bold;
-                            text-align: left;
-                        }
-                        #TituloRelatorio{
-                            width: 100%; 
-                            float: left;
-                            padding-top: 20px;
-                            font-size: 20px;
-                            font-weight: bold;
-                            padding-bottom: 20px;
-                        }
-                        #Campo{
-                            font-size: 15px;
-                            padding-left: 20px;
-
-                        }
-                        #Resultado{
-                            font-size: 15px;
-
-                        }
-                        #Obs{
-                            font-size: 15px;
-
-                        }
-                        </style>
-
-
-                        <div class = "FuncInfo">
-                        <div class = "Nome" >
-                            Funcionario 1 -
-                        </div>    
-                        <div class = "Data">
-                            30/05/2019
-                        </div>    
-
-                        <div class="container">
-                            <br>
-                            <span id = "TituloRelatorio">Geral</span>
-                            <br>
-                            <br>
-                            <div class = "Geral">
-                                
-                                <div class = "Desempenho" id= "Campo">
-                                Desempenho
-                                </div>  
-                                <div class = "ResultadoDesempenho" id = "Resultado">  
-                                -  Otimo
-                                </div>
-                                <div class = "ObsDesempenho" id ="Obs">
-                                 -  Acima da média
-                                </div>    
-
-                            </div>
-                            
-                        </div>
-                        <br>
-                        
-                        <br>
-                        <span id = "TituloRelatorio">Postura</span>
-                        <br>
-                        <br>
-                        <div class = "Geral">
-                            
-                            <div class = "Desempenho" id= "Campo">
-                            Desempenho
-                            </div>  
-                            <div class = "ResultadoDesempenho" id = "Resultado">  
-                            -  Regular
-                            </div>
-                            <div class = "ObsDesempenho" id ="Obs">
-                             -  Acima da média
-                            </div>    
-
-                        </div>
-                        <br>
-                        <br>
-                        <span id = "TituloRelatorio">Entrega</span>
-                        <br>
-                        <br>
-                        <div class = "Geral">
-                            
-                            <div class = "Desempenho" id= "Campo">
-                            Desempenho
-                            </div>  
-                            <div class = "ResultadoDesempenho" id = "Resultado">  
-                            -  Regular
-                            </div>
-                            <div class = "ObsDesempenho" id ="Obs">
-                             -  Acima da média
-                            </div>    
-
-                        </div>
-                        
-                    </div>
-
-
-
-                    <div class = "FuncInfo">
-                            <div class = "Nome" >
-                                Funcionario 2 -
-                            </div>    
-                            <div class = "Data">
-                                30/05/2019
-                            </div>    
-    
-                            <div class="container">
-                                <br>
-                                <span id = "TituloRelatorio">Geral</span>
-                                <br>
-                                <br>
-                                <div class = "Geral">
-                                    
-                                    <div class = "Desempenho" id= "Campo">
-                                    Desempenho
-                                    </div>  
-                                    <div class = "ResultadoDesempenho" id = "Resultado">  
-                                    -  Otimo
-                                    </div>
-                                    <div class = "ObsDesempenho" id ="Obs">
-                                     -  Acima da média
-                                    </div>    
-    
-                                </div>
-                                
-                            </div>
-                            <br>
-                            
-                            <br>
-                            <span id = "TituloRelatorio">Postura</span>
-                            <br>
-                            <br>
-                            <div class = "Geral">
-                                
-                                <div class = "Desempenho" id= "Campo">
-                                Desempenho
-                                </div>  
-                                <div class = "ResultadoDesempenho" id = "Resultado">  
-                                -  Regular
-                                </div>
-                                <div class = "ObsDesempenho" id ="Obs">
-                                 -  Acima da média
-                                </div>    
-    
-                            </div>
-                            <br>
-                            <br>
-                            <span id = "TituloRelatorio">Entrega</span>
-                            <br>
-                            <br>
-                            <div class = "Geral">
-                                
-                                <div class = "Desempenho" id= "Campo">
-                                Desempenho
-                                </div>  
-                                <div class = "ResultadoDesempenho" id = "Resultado">  
-                                -  Regular
-                                </div>
-                                <div class = "ObsDesempenho" id ="Obs">
-                                 -  Acima da média
-                                </div>    
-    
-                            </div>
-                            
-                        </div>
-
-                        <div class = "FuncInfo">
-                                <div class = "Nome" >
-                                    Funcionario 3 -
-                                </div>    
-                                <div class = "Data">
-                                    30/05/2019
-                                </div>    
-        
-                                <div class="container">
-                                    <br>
-                                    <span id = "TituloRelatorio">Geral</span>
-                                    <br>
-                                    <br>
-                                    <div class = "Geral">
-                                        
-                                        <div class = "Desempenho" id= "Campo">
-                                        Desempenho
-                                        </div>  
-                                        <div class = "ResultadoDesempenho" id = "Resultado">  
-                                        -  Otimo
-                                        </div>
-                                        <div class = "ObsDesempenho" id ="Obs">
-                                         -  Acima da média
-                                        </div>    
-        
-                                    </div>
-                                    
-                                </div>
-                                <br>
-                                
-                                <br>
-                                <span id = "TituloRelatorio">Postura</span>
-                                <br>
-                                <br>
-                                <div class = "Geral">
-                                    
-                                    <div class = "Desempenho" id= "Campo">
-                                    Desempenho
-                                    </div>  
-                                    <div class = "ResultadoDesempenho" id = "Resultado">  
-                                    -  Regular
-                                    </div>
-                                    <div class = "ObsDesempenho" id ="Obs">
-                                     -  Acima da média
-                                    </div>    
-        
-                                </div>
-                                <br>
-                                <br>
-                                <span id = "TituloRelatorio">Entrega</span>
-                                <br>
-                                <br>
-                                <div class = "Geral">
-                                    
-                                    <div class = "Desempenho" id= "Campo">
-                                    Desempenho
-                                    </div>  
-                                    <div class = "ResultadoDesempenho" id = "Resultado">  
-                                    -  Regular
-                                    </div>
-                                    <div class = "ObsDesempenho" id ="Obs">
-                                     -  Acima da média
-                                    </div>    
-        
-                                </div>
-                                
-                            </div>
-
-
-                        <div class = "btnsRelatorio">
-                            <br>
-                            <br>
-                                <a href="#add_employee"><button type="button" class="std add_employee" onclick="FecharRelatorio();">Sair</button></a>
-                                <a href="#add_employee"><button type="button" class="std add_employee" onclick="Imprimir()">Imprimir</button></a>                        
-                        </div>    
-
-                </div>
-
-
-                        
-        </div>
-
-                                <div class = "Impressao" id ="Impressao">
-                                </div>
-         <script>
-
-                var Relatorio = document.getElementById("Relatorio");
-                var Blur = document.getElementById("Blur");
-
-          function  FecharRelatorio(){
-              
-              Relatorio.style.visibility = "collapse";
-              Blur.style.visibility = "collapse";
-          }
-
-          function AbreRelatorio(){
-            Relatorio.style.visibility = "visible";
-            Blur.style.visibility = "visible";
-
-          }
-          function Imprimir(){
-                 var Impressao = document.getElementById('Impressao');
-                 var conteudo = document.getElementById('Relatorio').innerHTML,
-                 tela_impressao = window.open('about:blank');
-
-                tela_impressao.document.write(conteudo);
-                tela_impressao.window.print();
-                tela_impressao.window.close();
-
-          };
-
-       
-
-
-
-
-         </script>    
-
+        <script src="scripts/modernizr.min.js" type="text/javascript"></script>
+        <script src="scripts/main.js" type="text/javascript"></script>
 
     </body>
 </html>

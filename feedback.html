@@ -7,20 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/system.css"></link>
         <link rel="stylesheet" type="text/css" href="css/modal.css"></link>
 
-        <script src="scripts/modernizr.min.js" type="text/javascript"></script>
-        <script src="scripts/jquery.min.js" type="text/javascript"></script>
-        <script src="scripts/main.js" type="text/javascript"></script>
     </head>
-
-<style>
-
-
-
-
-
-
-
-</style>
 
     <body>
         <div class="background"></div>          
@@ -72,118 +59,22 @@
 
         <div class="content">
             <div class="elements">
-                <section id="feedback_accordion">
-                    <h1>Feedback</h1>
+                <section class="wrapper" id="feedback_accordion">
+                    <article class="wrapper_header">
+                    	<h1>Feedback</h1>
+                    </article>
                     <div id="name" class="item">
                         <p>Nome</p>
-                        <input type="text" name="name"/>
+                        <input type="text" name="name" id="name_input">
                     </div>
 
-                    <style>
-                        #BotaoGeral{
-                            border-Radius : 20px 20px 20px 20px ;
-                        }
-                        #BotaoPostura{
-                            border-Radius : 20px 20px 20px 20px ;
-                        }
-                        #BotaoEntrega{
-                            border-Radius : 20px 20px 20px 20px ;
-                        }
-                        .content_collapsible{
-                            
-                            width: 100%;
-                            border: 0px;
-                            padding: 0px;
-                            border-Radius : 0px 0px 20px 20px ;
-                           
-                        }
-                        .collapsible{
-                         
-
-                        }
-                        .content_collapsible{
-                            display: none;
-                        }
-                        #cc1{
-                           
-                            
-                        }
-                    </style>
-                    <script>
-                             var bi = 1;
-                            function BotaoGeral(){
-                                    bi++;     
-                                    if(bi == 1 ){
-                                        document.getElementById("BotaoGeral").style.borderRadius = "20px 20px 20px 20px ";
-                                    }
-                                    if(bi == 2){
-                                    document.getElementById("BotaoGeral").style.borderRadius = "20px 20px 0px 0px ";
-                                        bi = 0 ;
-                                }
-                            }
-                            //BotaoPostura()
-                            var bi2 = 1;
-                            function BotaoPostura(){
-                                    bi2++;     
-                                    if(bi2 == 1 ){
-                                        document.getElementById("BotaoPostura").style.borderRadius = "20px 20px 20px 20px ";
-                                    }
-                                    if(bi2 == 2){
-                                    document.getElementById("BotaoPostura").style.borderRadius = "20px 20px 0px 0px ";
-                                        bi2 = 0 ;
-                                }
-                            }
-                            var bi3 = 1;
-                            function BotaoEntrega(){
-                               
-                                bi3++;     
-                                    if(bi3 == 1 ){
-                                        document.getElementById("BotaoEntrega").style.borderRadius = "20px 20px 20px 20px ";
-                                    }
-                                    if(bi3 == 2){
-                                    document.getElementById("BotaoEntrega").style.borderRadius = "20px 20px 0px 0px ";
-                                        bi3 = 0 ;
-                                }
-                             
-                            }
-
-                    </script>
-
-                        <style>
-
-                            .radios{
-                                font-size:20px;
-                            }
-                            .radio-inline{
-                                font-size:18px;
-                                color:black;
-                            }
-                            #TextAreaRelatorio{
-                            width: 100%;
-                                
-
-                               
-                              
-                            }
-                            .item{
-                              
-                            }
-                            input[type="text"],
-                            textarea {
-                                width:250px;
-                                padding: 10px;
-                            
-                                }
-
-                           
+                    <input type="checkbox" id="expand_all">
+                    <label for="expand_all">Expandir todos</label>
 
 
-
-                        </style>    
-
-                    <button class="collapsible"  id = "BotaoGeral" onclick="BotaoGeral()">Geral</button>
-                    <div class="content_collapsible"  id = "cc1">
-                    <!-- Desempenho/Produtividade/Faltas no trabalho
+                    <button class="collapsible">Geral</button>
+                    <div class="content_collapsible">
+                    <!-- Desempenho/Produtividade/Faltas no trabalho-->
                         <div class="radios">
                             <input type="radio" name="adequacao_fa1" id="in_fa1">
                             <label for="in_fa1" class="radio-inline">Insuficiente</label>
@@ -197,278 +88,207 @@
                             <input type="radio" name="adequacao_fa1" id="ex_fa1">
                             <label for="ex_fa1" class="radio-inline">Excelente</label>
                         </div>
-                        -->
                         <div class="item">
                             <p>Desempenho</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_desempenho"><div></div>
+                                <input type="radio" name="adequacao_desempenho"><div></div>
+                                <input type="radio" name="adequacao_desempenho"><div></div>
+                                <input type="radio" name="adequacao_desempenho"><div></div>
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"  ></textarea>
+                            <textarea name="job_description" placeholder="Observações" style="margin: 0px -6px 0px 0px; width: 530px; height: 74px;"></textarea>
                         </div>
                         <div class="item">
                             <p>Produtividade</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_produtividade">
+                                <input type="radio" name="adequacao_produtividade">
+                                <input type="radio" name="adequacao_produtividade">
+                                <input type="radio" name="adequacao_produtividade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                         <div class="item">
                             <p>Faltas no trabalho</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_faltas">
+                                <input type="radio" name="adequacao_faltas">
+                                <input type="radio" name="adequacao_faltas">
+                                <input type="radio" name="adequacao_faltas">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                     </div>
-                    <br><br>
+                    
 
                     <!-- Alinhamento com a cultura da empresa/Comprometimento/Proatividade/Educação-->
-                    <button class="collapsible"  id = "BotaoPostura" onclick="BotaoPostura()">Postura</button>
-                    <div class="content_collapsible"  id = "cc2">
-                       
+                    <button class="collapsible">Postura</button>
+                    <div class="content_collapsible">
+                        <div class="radios">
+                            <input type="radio" name="adequacao_fa2" id="in_fa2">
+                            <label for="in_fa2" class="radio-inline">Insuficiente</label>
+
+                            <input type="radio" name="adequacao_fa2" id="md_fa2">
+                            <label for="md_fa2" class="radio-inline">Moderado</label>
+
+                            <input type="radio" name="adequacao_fa2" id="bm_fa2">
+                            <label for="bm_fa2" class="radio-inline">Bom</label>
+
+                            <input type="radio" name="adequacao_fa2" id="ex_fa2">
+                            <label for="ex_fa2" class="radio-inline">Excelente</label>
+                        </div>
                         <div class="item">
                             <p>Alinhamento à cultura da empresa</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_cultura">
+                                <input type="radio" name="adequacao_cultura">
+                                <input type="radio" name="adequacao_cultura">
+                                <input type="radio" name="adequacao_cultura">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                         <div class="item">
                             <p>Compromentimento</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_comprometimento">
+                                <input type="radio" name="adequacao_comprometimento">
+                                <input type="radio" name="adequacao_comprometimento">
+                                <input type="radio" name="adequacao_comprometimento">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                         <div class="item">
                             <p>Proatividade</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_proatividade">
+                                <input type="radio" name="adequacao_proatividade">
+                                <input type="radio" name="adequacao_proatividade">
+                                <input type="radio" name="adequacao_proatividade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                         <div class="item">
                             <p>Relacionamentos interpessoais/educação</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_relacionamentos">
+                                <input type="radio" name="adequacao_relacionamentos">
+                                <input type="radio" name="adequacao_relacionamentos">
+                                <input type="radio" name="adequacao_relacionamentos">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                     </div>
-                    <br><br>
+                    
 
                     <!-- Pontualidade/Qualidade/Eficácia -->
-                    <button class="collapsible" id = "BotaoEntrega" onclick="BotaoEntrega()">Entrega</button>
-                    <div class="content_collapsible" id = "cc3">
-                        
+                    <button class="collapsible">Entrega</button>
+                    <div class="content_collapsible">
+                        <div class="radios">
+                            <input type="radio" name="adequacao_fa3" id="in_fa3">
+                            <label for="in_fa3" class="radio-inline">Insuficiente</label>
+
+                            <input type="radio" name="adequacao_fa3" id="md_fa3">
+                            <label for="md_fa3" class="radio-inline">Moderado</label>
+
+                            <input type="radio" name="adequacao_fa3" id="bm_fa3">
+                            <label for="bm_fa3" class="radio-inline">Bom</label>
+
+                            <input type="radio" name="adequacao_fa3" id="ex_fa3">
+                            <label for="ex_fa3" class="radio-inline">Excelente</label>
+                        </div>
                         <div class="item">
                             <p>Pontualidade de entrega</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_pontualidade">
+                                <input type="radio" name="adequacao_pontualidade">
+                                <input type="radio" name="adequacao_pontualidade">
+                                <input type="radio" name="adequacao_pontualidade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                         <div class="item">
                             <p>Qualidade e eficiência</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_qualidade">
+                                <input type="radio" name="adequacao_qualidade">
+                                <input type="radio" name="adequacao_qualidade">
+                                <input type="radio" name="adequacao_qualidade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                         <div class="item">
                             <p>Eficácia/adequação aos processos</p>
                             <div class="radios">
-                                    <div class="radios">
-                                            <input type="radio" name="adequacao_fa1" id="in_fa1">
-                                            <label for="in_fa1" class="radio-inline">Insuficiente</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="md_fa1">
-                                            <label for="md_fa1" class="radio-inline">Moderado</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="bm_fa1">
-                                            <label for="bm_fa1" class="radio-inline">Bom</label>
-                
-                                            <input type="radio" name="adequacao_fa1" id="ex_fa1">
-                                            <label for="ex_fa1" class="radio-inline">Excelente</label>
-                                        </div>
+                                <input type="radio" name="adequacao_processos">
+                                <input type="radio" name="adequacao_processos">
+                                <input type="radio" name="adequacao_processos">
+                                <input type="radio" name="adequacao_processos">
                             </div>
-                            <textarea name="job_description" placeholder="Observações" id = "TextAreaRelatorio"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
                         </div>
                     </div>
-                    <br><br>
+
+                    <!-- ROI em educação -->
+                    <button class="collapsible">ROI em cursos/educação</button>
+                    <div class="content_collapsible">
+                        <div class="radios">
+                            <input type="radio" name="adequacao_fa4" id="in_fa4">
+                            <label for="in_fa4" class="radio-inline">Insuficiente</label>
+
+                            <input type="radio" name="adequacao_fa4" id="md_fa4">
+                            <label for="md_fa4" class="radio-inline">Moderado</label>
+
+                            <input type="radio" name="adequacao_fa4" id="bm_fa4">
+                            <label for="bm_fa4" class="radio-inline">Bom</label>
+
+                            <input type="radio" name="adequacao_fa4" id="ex_fa4">
+                            <label for="ex_fa3" class="radio-inline">Excelente</label>
+                        </div>
+                        <div class="item">
+                            <p>Desempenho no curso</p>
+                            <div class="radios">
+                                <input type="radio" name="adequacao_curso">
+                                <input type="radio" name="adequacao_curso">
+                                <input type="radio" name="adequacao_curso">
+                                <input type="radio" name="adequacao_curso">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Implementação dos conhecimentos adquiridos</p>
+                            <div class="radios">
+                                <input type="radio" name="implementacao_conhecimentos">
+                                <input type="radio" name="implementacao_conhecimentos">
+                                <input type="radio" name="implementacao_conhecimentos">
+                                <input type="radio" name="implementacao_conhecimentos">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                        <div class="item">
+                            <p>Valor gerado para a empresa</p>
+                            <div class="radios">
+                                <input type="radio" name="valor_gerado">
+                                <input type="radio" name="valor_gerado">
+                                <input type="radio" name="valor_gerado">
+                                <input type="radio" name="valor_gerado">
+                            </div>
+                            <textarea name="job_description" placeholder="Observações"></textarea>
+                        </div>
+                    </div>
+
                 </section>
 
-                                <script>
-                                     function MostrarTudo(){
-                                         
-
-                                         BotaoEntrega();
-                                         BotaoGeral();
-                                         BotaoPostura();   
-
-
-                                         var coll = document.getElementsByClassName("collapsible");
-                                          var j;
-                                          document.getElementById("cc1").style.display = "block";
-                                         document.getElementById("cc2").style.display = "block";
-                                         document.getElementById("cc3").style.display = "block";
-                                        
-                                         
-
-                                     
-                                     }
-           
-                                    
-
-                                    
-                                </script>
-
                 <div class="decision_buttons">
-                        <label>
-                                <input type="checkbox" onclick = "MostrarTudo()">
-                                <span>Mostrar Tudo</span>
-                        
-                        </label>
-                    <label>
-                        <input type="checkbox" checked>
-                        <span>Gerar relatório de impressão</span>
-                    </label>
-
-                  
-
+                    <input id="relatorio" type="checkbox" checked>
+                    <label for="relatorio">Gerar relatório de impressão</label>
                     <button name="cadastrar" onclick="confirmaCadastro()">Submeter</button>
                 </div>
             </div>
         </div>
 
-        <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-           
-            for (i = 0; i < coll.length; i++) {
-                
-                coll[i].addEventListener("click", function () {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                    } else {
-                        content.style.display = "block";
-                    }
-                });
-            }
 
-               
-        </script>
-
+        <script src="scripts/modernizr.min.js" type="text/javascript"></script>
+        <script src="scripts/main.js" type="text/javascript"></script>
     </body>
 
 </html>
