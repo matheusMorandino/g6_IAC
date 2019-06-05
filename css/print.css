@@ -1,0 +1,50 @@
+@media print {
+    body{
+        width: 21cm;
+        height: 29.7cm;
+        margin: 30mm 45mm 30mm 45mm;
+        background: #fff;
+        color: #666;
+   }
+
+   element, input[type="text"], textarea, .item textarea,
+   div, section, article, button, button.collapsible, div.content,
+   div.content_collapsible, article.wrapper_header{
+   	margin: 0;
+   	padding: 0;
+   	border: none;
+   	border-radius: 0;
+   	border-bottom: none;
+   	box-shadow: none;
+   	resize: none;
+
+   }
+
+   .item textarea {
+   	padding: 5pt 0;
+   	max-height: none;
+   }
+
+   div.background, nav, div.content_collapsible, button.collapsible, button.collapsible:after,
+   div.decision_buttons, #expand_all, label[for="expand_all"], .radios input[type="radio"],
+   .radios input[type="radio"]+label, textarea::placeholder{
+   	display: none;
+   }
+
+   .item .radios, .item .radios input[type="radio"] {
+   	display: inline;
+   }
+
+   input[type="radio"]:checked+label{
+   	display: inline;
+   	font-weight: 800;
+   }
+
+   input[type="radio"]:checked+label:before {
+   	content: "Indicador:  ";
+   }
+
+   button.collapsible.active, div.content_collapsible.active {
+   	display: block;
+   }
+}

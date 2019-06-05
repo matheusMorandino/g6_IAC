@@ -1,29 +1,29 @@
 var loginData = [
-        {
-            usuario: "Emilio",
-            senha: "Haro"
-        },
-        {
-            usuario: "Amanda",
-            senha: "Venturin"
-        },
-        {
-            usuario: "Thais",
-            senha: "Lasso"
-        },
-        {
-            usuario: "Matheus",
-            senha: "Morandino"
-        },
-        {
-            usuario: "Naiara",
-            senha: "Alflen"
-        },
-        {
-            usuario: "Avaliador",
-            senha: "Avaliador"
-        }
-    ];
+    {
+        usuario: "Emilio",
+        senha: "Haro"
+    },
+    {
+        usuario: "Amanda",
+        senha: "Venturin"
+    },
+    {
+        usuario: "Thais",
+        senha: "Lasso"
+    },
+    {
+        usuario: "Matheus",
+        senha: "Morandino"
+    },
+    {
+        usuario: "Naiara",
+        senha: "Alflen"
+    },
+    {
+        usuario: "Avaliador",
+        senha: "Avaliador"
+    }
+];
 
 
 //login apertando a tecla enter
@@ -47,11 +47,6 @@ function validateUser() {
     alert("Usuário ou senha incorretos");
     return false;
     }
-
-
-function confirmaCadastro() {
-    confirm("Deseja finalizar o cadastramento?");
-}
 
 function confirmaCadastro() {
     confirm("Deseja submeter a avaliação?");
@@ -103,6 +98,66 @@ checkb.addEventListener("click", function (){
     }
 });
 
+
+function show_reports(source) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 1; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source && checkboxes[i])
+            checkboxes[i].checked = source.checked;
+    }
+}
+
+function select_report(row){
+    var checkbox = row.getElementsByTagName('input')[0];
+    checkbox.checked = !checkbox.checked;
+}
+
+
+function confirmaCadastro(){
+    var print;
+    print = document.getElementById("relatorio");
+    if(print.checked) window.print();
+    else notify_success();
+}
+
+function update_print_helper(textarea){
+    var text = textarea.innerText;
+    var t = document.createTextNode(text);
+    document.getElementById("test_helper").appendChild(t);
+}
+/*
+function search_by_name(){
+    var input, textValue, names;
+    input = document.getElementById("search_name").value;
+    names = document.getElementsByClassName("employee_name");
+
+    add_tag(input);
+    input = input.toLowerCase();
+    for(i = 0; i < names.length()){
+        textValue = names[i].innerText || names[i].textContent;
+        if(textValue.toLowerCase() != input && !is_tag(textValue)) names[i].parentElement.style.display = "none";
+    }
+}
+
+function add_tag(text){
+    const content, childElement, parentElement;
+    parentElement = document.getElementsByClassName('wrapper_tags')[0];
+    childElement = document.createElement("div").addClass("search_tag");
+    content = document.createTextNode(text);
+    childElement.appendChild(content);
+    parentElement.appendChild(childElement);
+}
+
+function is_tag(text){
+    var tags, content;
+    tags = document.getElementsByClassName("search_tag");
+    for(i = 0; i < tags.length; i++){
+        content = tags[i].innerText || tags[i].textContent;
+        if(content == text) return true;
+    }
+    return false;
+}
+*/
 
 /*/relatorio checkbox selecionar todas
 var trs = document.getElementsByTagName("tr");

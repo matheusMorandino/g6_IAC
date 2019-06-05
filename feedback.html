@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"></link>
         <link rel="stylesheet" type="text/css" href="css/system.css"></link>
         <link rel="stylesheet" type="text/css" href="css/modal.css"></link>
-
+        <link rel="stylesheet" type="text/css" href="css/print.css"></link>
     </head>
 
     <body>
@@ -96,7 +96,8 @@
                                 <input type="radio" name="adequacao_desempenho"><div></div>
                                 <input type="radio" name="adequacao_desempenho"><div></div>
                             </div>
-                            <textarea name="job_description" placeholder="Observações" style="margin: 0px -6px 0px 0px; width: 530px; height: 74px;"></textarea>
+                            <textarea name="job_description" placeholder="Observações" style="margin: 0px -6px 0px 0px; width: 530px; height: 74px;"></textarea>         
+							
                         </div>
                         <div class="item">
                             <p>Produtividade</p>
@@ -106,7 +107,9 @@
                                 <input type="radio" name="adequacao_produtividade">
                                 <input type="radio" name="adequacao_produtividade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            </textarea oninput="update_print_helper(this)" name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>          
+							<div class="print_helper"></div>
                         </div>
                         <div class="item">
                             <p>Faltas no trabalho</p>
@@ -116,7 +119,9 @@
                                 <input type="radio" name="adequacao_faltas">
                                 <input type="radio" name="adequacao_faltas">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>          
+							<div class="print_helper"></div>
                         </div>
                     </div>
                     
@@ -145,7 +150,9 @@
                                 <input type="radio" name="adequacao_cultura">
                                 <input type="radio" name="adequacao_cultura">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>          
+							<div class="print_helper"></div>
                         </div>
                         <div class="item">
                             <p>Compromentimento</p>
@@ -155,7 +162,8 @@
                                 <input type="radio" name="adequacao_comprometimento">
                                 <input type="radio" name="adequacao_comprometimento">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>
                         </div>
                         <div class="item">
                             <p>Proatividade</p>
@@ -165,7 +173,9 @@
                                 <input type="radio" name="adequacao_proatividade">
                                 <input type="radio" name="adequacao_proatividade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>          
+							<div class="print_helper"></div>
                         </div>
                         <div class="item">
                             <p>Relacionamentos interpessoais/educação</p>
@@ -175,7 +185,8 @@
                                 <input type="radio" name="adequacao_relacionamentos">
                                 <input type="radio" name="adequacao_relacionamentos">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>
                         </div>
                     </div>
                     
@@ -204,7 +215,8 @@
                                 <input type="radio" name="adequacao_pontualidade">
                                 <input type="radio" name="adequacao_pontualidade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>
                         </div>
                         <div class="item">
                             <p>Qualidade e eficiência</p>
@@ -214,7 +226,8 @@
                                 <input type="radio" name="adequacao_qualidade">
                                 <input type="radio" name="adequacao_qualidade">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>
                         </div>
                         <div class="item">
                             <p>Eficácia/adequação aos processos</p>
@@ -224,7 +237,8 @@
                                 <input type="radio" name="adequacao_processos">
                                 <input type="radio" name="adequacao_processos">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>
                         </div>
                     </div>
 
@@ -252,7 +266,8 @@
                                 <input type="radio" name="adequacao_curso">
                                 <input type="radio" name="adequacao_curso">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>
                         </div>
                         <div class="item">
                             <p>Implementação dos conhecimentos adquiridos</p>
@@ -262,7 +277,8 @@
                                 <input type="radio" name="implementacao_conhecimentos">
                                 <input type="radio" name="implementacao_conhecimentos">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>
                         </div>
                         <div class="item">
                             <p>Valor gerado para a empresa</p>
@@ -272,7 +288,8 @@
                                 <input type="radio" name="valor_gerado">
                                 <input type="radio" name="valor_gerado">
                             </div>
-                            <textarea name="job_description" placeholder="Observações"></textarea>
+                            <textarea name="job_description" placeholder="Observações"></textarea>          
+							<div class="print_helper"></div>
                         </div>
                     </div>
 
@@ -280,7 +297,7 @@
 
                 <div class="decision_buttons">
                     <input id="relatorio" type="checkbox" checked>
-                    <label for="relatorio">Gerar relatório de impressão</label>
+                    <label for="relatorio">Gerar PDF</label>
                     <button name="cadastrar" onclick="confirmaCadastro()">Submeter</button>
                 </div>
             </div>

@@ -29,6 +29,10 @@ body {
   z-index: -1;
 }
 
+button:focus {
+  outline:0;
+}
+
 object {
   pointer-events: none;
 }
@@ -282,4 +286,12 @@ a.logo_login {
   margin: 4px 2px;
   display: flex; 
   justify-content: center; 
+}
+
+
+
+
+@media screen and (min-aspect-ratio: 16/10) { 
+
+
 }

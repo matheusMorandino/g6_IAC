@@ -62,52 +62,42 @@
             <div class="elements">
                 <section class="wrapper">
                     <article class="wrapper_header">
-                        <h1>Relatórios</h1>    
-                    </article>                             
+                        <h1>Relatórios</h1> 
+                        <div class="search_bar">                        		
+                            <input type="text" class="form-control" id="search_name" placeholder="Nome do funcionario" aria-label="" id="reports_search_bar">
+							<button type="button" onclick="search_by_name();"> 
+                            	Buscar
+                            </button>
+               			</div>
+                    </article>
+                    <article class="wrapper_tags" style="display: none;">
+                    	<div class="search_tag">test</div>
+                    </article>                           
                     <table id="reports_table">
                         <tbody>
-                            <tr onclick="open_report();">
-                                <td class ="employee_name">
-                                    <input type="checkbox" checked/>
-                                    Funcionário 0
-                                </td>
-                                <td>
-                                    01/05/2019
-                                </td>
+                            <tr onclick="select_report(this);">
+	                                <td class ="employee_name">
+	                                    <input type="checkbox" checked/>
+	                                    Funcionário 1
+	                                </td>
+	                                <td>
+	                                    01/05/2019
+	                                </td>	
                             </tr>
-                            <tr onclick="open_report();">
-                                <td class ="employee_name">
-                                    <input type="checkbox" checked/>
-                                    Funcionário 1
-                                </td>
-                                <td>
-                                    23/05/2019
-                                </td>
-                            </tr>
-                            <tr onclick="open_report();">
+                            <tr onclick="select_report(this);">
                                 <td class ="employee_name">
                                     <input type="checkbox" checked/>
                                     Funcionário 2
                                 </td>
                                 <td>
-                                    25/05/2019
+                                    23/05/2019
                                 </td>
                             </tr>
-                            <tr onclick="open_report();">
-                                <td class ="employee_name">
-                                    <input type="checkbox" checked/>
-                                    Funcionário 3
-                                </td>
-                                <td>
-                                    30/04/2019
-                                </td>
-                            </tr>
-                            
                         </tbody>
                     </table>                        
                 </section>
                 <div class="decision_buttons">
-                    <input type="checkbox" id="show_all_reports" checked>
+                    <input type="checkbox" id="show_all_reports" checked onclick="show_reports(this)">
                     <label for="show_all_reports">Selecionar tudo</label>
 
                     <a href="#add_employee"><button type="button" class="std add_employee">Visualisar</button></a>
@@ -115,6 +105,8 @@
                 </div>
             </div>
         </div>
+
+            
 
         <script src="scripts/modernizr.min.js" type="text/javascript"></script>
         <script src="scripts/main.js" type="text/javascript"></script>
