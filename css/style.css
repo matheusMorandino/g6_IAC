@@ -44,7 +44,6 @@ h1, h2{
     color: #7d7d7d;
 }
 
-
 h1{
   font-size: 6vw;
 }
@@ -53,9 +52,8 @@ h2{
   font-size: 4vw;
 }
 
-
 p {
-  font-size: 1em;
+  font-size: 3.5vw;
   color: #5B5B5B;
 }
 
@@ -115,6 +113,7 @@ a.logo_login {
   height: auto;
   position: relative;
   padding: 0 10vw;
+  top: 5vh;
 }
 
 #index_s1 article{
@@ -313,5 +312,9 @@ a.logo_login {
 
   .logo{
     height: 50px;
+  }
+
+  p {
+    font-size: 1em;
   }
 }
