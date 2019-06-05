@@ -44,13 +44,15 @@ h1, h2{
     color: #7d7d7d;
 }
 
+
 h1{
-  font-size: 1.5em;
+  font-size: 6vw;
 }
 
 h2{
-  font-size: 1em;
+  font-size: 4vw;
 }
+
 
 p {
   font-size: 1em;
@@ -93,7 +95,7 @@ nav ul a:active{
 
 .logo{
   width: auto;
-  height: 50px;
+  height: 6vh;
   margin: 15px 0px 15px 40px;
 }
 
@@ -112,12 +114,12 @@ a.logo_login {
   min-height: 100%;
   height: auto;
   position: relative;
-  padding: 0 15%;
+  padding: 0 10vw;
 }
 
 #index_s1 article{
-  display: inline-block;
-  width: 40%;
+  display: block;
+  width: 100%;
   vertical-align: middle;
 }
 
@@ -130,74 +132,24 @@ a.logo_login {
 .index_char {
   display: inline-block;
   position: relative;
-  width: 100%;
-  padding: 120px 0 0 100px;
+  width: 100%;  
+  padding: 120px 0;
 }
 
-.login_form {
-  width: 20%;
-  min-width: 320px;
-  max-width: 475px;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  -o-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-
+ .login_form {
   border-radius: 10px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
- }
-
-@media(max-width: 40em){
-  .login_form {
-    width: 60%;
-    position: relative;
-    margin: 2.5% auto 16px auto;
-    left: 0%;
-    -webkit-transform: translate(0%,0%);
-    -moz-transform: translate(0%,0%);
-    -o-transform: translate(0%,0%);
-    -ms-transform: translate(0%,0%);
-    transform: translate(0%,0%);
-  }
-
-  #index_s1 article h1{
-  padding-top: 40px;
-  font-size: 2em;
-  display: block;
-  margin: auto;
-  }
-
-  #index_s1 article p{
-    display: block;
-    margin: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  }
-
-  #index_s1 {
-    padding: 100px 5% 0 0;
-  }
-  #index_s1 article{
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .index_char{
-    width: 70%;
-    padding: 50px 15% 50px 15%;
-  }
-  .log-form {
-    background: transparent;
-    box-shadow: none;
-    width: 95%;
-   }
-
+  top: 10vh;
+  width: 90%;
+  background: #fff;
+  position: relative;
+  margin: 2.5% auto 16px auto;
+  left: 0%;
+  -webkit-transform: translate(0%,0%);
+  -moz-transform: translate(0%,0%);
+  -o-transform: translate(0%,0%);
+  -ms-transform: translate(0%,0%);
+  transform: translate(0%,0%);
 }
 
 .login_form form {
@@ -205,6 +157,7 @@ a.logo_login {
   width: 100%;
   padding: 2em;
   box-sizing:border-box;
+  font-size: 4vw;
 }
 
 .login_form input {
@@ -264,34 +217,101 @@ a.logo_login {
   padding: 0px 10px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
 .loginButton {
   background-color: #1E9CD7;
   border: none;
   color: white;
-  padding-top:10px;
-  padding-bottom: 10px;
+  padding-top:.6em;
+  padding-bottom: .6em;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: 4vw;
   margin: 4px 2px;
   display: flex; 
   justify-content: center; 
+  margin-bottom: 1em;
 }
 
-
-
-
 @media screen and (min-aspect-ratio: 16/10) { 
+  h1{
+    font-size: 1.5em;
+  }
 
+  h2{
+    font-size: 1em;
+  }
 
+  #index_s1 article h1{
+    padding-top: 40px;
+    font-size: 2em;
+    display: block;
+    margin: auto;
+  }
+
+  #index_s1 article p{
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #index_s1 {
+    padding: 100px 5% 0 0;
+  }
+  #index_s1 article{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .index_char{
+    width: 70%;
+    padding: 50px 15% 50px 15%;
+  }
+  .log-form {
+    background: transparent;
+    box-shadow: none;
+    width: 95%;
+   }
+
+   .login_form {
+    width: 20%;
+    min-width: 320px;
+    max-width: 475px;
+    min-width: 320px;
+    max-width: 475px;
+    min-height: auto;
+    margin: auto;
+    display: block;
+    padding: 20px;
+ }
+
+  .login_form form, .loginButton {
+    font-size: 16px;
+  }
+
+  .login_form form {
+    padding: 1vw;
+  }
+
+  #index_s1 {
+    padding: 0 15%;
+  }
+
+  #index_s1 article{
+    display: inline-block;
+    width: 40%;
+  }
+
+  .index_char {
+    padding: 120px 0 0 100px;
+  }
+
+  .logo{
+    height: 50px;
+  }
 }

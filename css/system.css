@@ -51,7 +51,7 @@ h1.subtle {
   width: 100%;
   max-width: 100%;
   position: fixed;
-  top: 40px;
+  top: 5vh;
   left: 0;
   overflow-x: hidden;
   font-family: 'open sans';
@@ -93,7 +93,9 @@ h1.subtle {
 }
 
 #sidenav ul li{
-  padding: 15px 0px 15px 0px;
+  padding: 3vh 0;
+  font-size: 3vw;
+
 }
 
 /* The navigation menu links */
@@ -217,6 +219,12 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transform: rotate(-135deg);
     margin-top: -1.45vh;
 }
+
+[type="checkbox"], [type="radio"] {
+    height: 1.4vh;
+    width: 1.4vh;
+}
+
 /* END OF SIDEBAR TOGGLE MENU*/
 
 
@@ -226,9 +234,10 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 button {
 	background: #1e9cd7;
 	color: #fff;
-	padding: 6px 12px;
 	border: none;
 	border-radius: 10px;
+	font-size: 2.8vw;
+	padding: .5em;	
 }
 
 button.small {
@@ -256,7 +265,7 @@ button:hover{
 }
 
 label, .decision_buttons label {
-	font-size: .7em;
+	font-size: 3vw;
 	cursor: pointer;
 }
 
@@ -264,7 +273,7 @@ label, .decision_buttons label {
 
 .content{
 	position: absolute;
-	top: 40px;
+	top: 5vh;
 	left: 0;
 	width: 100%;
 	min-height: 100%;
@@ -284,7 +293,7 @@ label, .decision_buttons label {
 }
 
 .item p {
-    font-size: .6em;
+    font-size: 2.8vw;
     font-weight: 800;
     display: inline-block;
 }
@@ -293,27 +302,27 @@ input, .item input{
 	border: none;
 	border: 1px solid #bdbdbd;
 	color: #afafaf;
-	padding: .5em;
+	padding: .5em 1%;
 	border-radius: 5px;
 }
 
-.item input[type="text"]{
-	display: block;
-	width: 90%;
-	font-size: .9em;
-	line-height: 1.5;
+.item input[type="text"] {
+    display: block;
+    width: 98%;
+    font-size: 1.9vh;
+    line-height: 1.5;
 }
 
 .item textarea {
     display: block;
     border: 1px solid #f6f6f6;
     border-radius: 10px;
-    padding: .5em;
-    min-width: 99%;
-    max-width: 99%;
-    max-height: 200px;
-    min-height: 80px;
-    font-size: 15px;
+    padding: 1.5vw;
+    min-width: calc(100% - 3vw);
+    max-width: calc(100% - 3vw);
+    max-height: 10vh;
+    min-height: 10vh;
+    font-size: 3.2vw;
     color: #5d5d5d;
 }
 
@@ -474,7 +483,7 @@ a:active .toggle_sign .vertical {
 	width: 100%;
 	text-align: left;
 	outline: none;
-	font-size: .9em;
+	font-size: 4vw;
 	font-weight: 700;
 	border-bottom: .5px solid #d4d4d4;
 	border-radius: 0;
@@ -512,7 +521,7 @@ button.collapsible:last-of-type.active {
 
 button.collapsible:after {
 	content: "\02795";
-	font-size: 18px;
+	font-size: 3vw;
 	color: white;
 	float: left;
 	margin-right: 10px;
@@ -591,8 +600,45 @@ button.collapsible.active:after {
 		width: 30%;
 	}
 
+	.item input[type="text"]{
+	font-size: 1em;
+	}
+
+	.item p {
+    font-size: .7em;
+	}
+
+	.item textarea {
+		font-size: 15px;
+	}
+
 	.search_bar button{
 		float: none;
+	}
+
+	button {
+		padding: 6px 12px;
+		font-size: 20px;
+	}
+
+	.item textarea {
+	    padding: .5em;
+	    min-width: 99%;
+	    max-width: 99%;
+	    max-height: 200px;
+	}
+
+	label, .decision_buttons label {
+	    font-size: .8em;
+	}
+
+	.collapsible, button.collapsible:after {
+		font-size: .9em;
+	}
+
+	#sidenav ul li {
+    	padding: 15px 0px 15px 0px;
+    	font-size: 14px;
 	}
 
 }
